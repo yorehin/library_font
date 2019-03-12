@@ -38,7 +38,7 @@
         <li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-斑点狗.png" height="300" width="360"/><div class="new-text">斑点狗约课-小程序</div></div></div></li>
       </ul>
       <div id="div-img"><img src="../../assets/img/home/首页最新产品指示球.png" height="48" width="48"/></div>
-      <div id="div-text"><div>查看更多<i class="iconfont icongengduo" style="color: white;"></i></div></div>
+      <div id="div-text"><div>查看更多<i class="iconfont icongengduo" style="color: white; font-size: 23px; margin-left: 2px"></i></div></div>
     </div>
   </div>
 
@@ -56,18 +56,20 @@
       <div class="about-div-1">
         <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
       </div>
+      <div class="line-line" style="margin-left: 740px; margin-top: -100px"></div>
       <div class="about-div-2">
         <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
       </div>
+      <div class="line-line" style="margin-left: 550px; margin-top: 85px"></div>
       <div class="about-div-3">
-        <div class="about-circular"><div class="year">2019</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
+        <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
       </div>
       <!--<div class="div-line">fdsfd</div>-->
       <div class="div-right">
-        <div class="div-riq">
+        <!--<div class="div-riq">-->
           <div class="div-top">发展历程</div>
-        </div>
-        <div class="div-bottom">企业文化</div>
+        <!--</div>-->
+          <div class="div-bottom">企业文化</div>
       </div>
     </div>
   </div>
@@ -83,15 +85,14 @@
     </div>
     <div id="contact-top">
       <div id="contact-left">
-        <div class="font-font"><i class="iconfont iconplace" style="color: white;"></i>&nbsp;&nbsp;地址:河南省安阳市汤阴县信合路南段路东47巷</div>
-        <div class="font-font"><i class="iconfont iconshouji" style="color: white;"></i>&nbsp;&nbsp;电话:155-3723-2100</div>
-        <div class="font-font"><i class="iconfont iconyouxiang" style="color: white;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
-        <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
+        <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址:河南省安阳市汤阴县信合路南段路东47巷</div>
+        <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话:155-3723-2100</div>
+        <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
+        <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
         <div class="look-code">扫码关注</div>
         <div class="use-code"><img src="../../assets/img/home/联系我们-二维码.png" height="220" width="220"/></div>
       </div>
       <div class="right-img"><img src="../../assets/img/home/地图.png" height="498" width="700"/></div>a
-      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
       <!--<ul>-->
       <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-Excel.png" height="300" width="360"/><div class="new-text">Excel小帮手-定制软件</div></div></div></li>-->
       <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-汤阴县图书馆.png" height="300" width="360"/><div class="new-text">汤阴县图书馆-WEB网站</div></div></div></li>-->
@@ -108,6 +109,13 @@
 </script>
 
 <style scoped>
+  .line-line{
+    border-left: 3px solid #10103b;
+    position:absolute;
+    width: 117px;
+    height: 117px;
+    transform: rotate(45deg);
+  }
 #product{
   height: 924px;
   width: 1920px;
@@ -256,8 +264,8 @@ a:hover{
 .iconfont {
   -webkit-app-region: no-drag;
   cursor: pointer;
-  font-size: 23px;
-  margin-left: 10px;
+  /*font-size: 23px;*/
+  /*margin-left: 10px;*/
 }
 
   #about{
@@ -278,6 +286,7 @@ a:hover{
     height: 70px;
     border-top: 1px solid black;
     border-left: 1px solid black;
+    /*transform: rotate(45deg);*/
   }
   #box1{
     margin-top: -1px;
@@ -287,7 +296,19 @@ a:hover{
     border-top: 1px solid white;
     border-left: 1px solid white;
   }
+  .iconfazhan{
+    font-size: 108px;
+  }
+  /*.img{*/
+    /*width: 30vw;*/
+    /*height: calc(30vw + 1%);*/
+  /*}*/
   #box2{
+    /*width: 100%;*/
+    /*background-image: url("");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 1920px 300px;*/
+    /*background-position: center;*/
     margin-top: -2px;
     margin-left: -2px;
     width: 10px;
@@ -360,11 +381,14 @@ a:hover{
     /*border-left: 50px solid white;*/
   }
 .div-right{
-  position:relative;
+  /*padding: 10px;*/
+  display: inline-block;
+  font-size: 25px;
+  /*position:relative;*/
   text-align: center;
   width: 400px;
   height: 48px;
-  line-height: 48px;
+  /*line-height: 48px;*/
   color: black;
   background-color: #fbb03b;
   margin-left: 750px;
@@ -373,29 +397,41 @@ a:hover{
 /*.div-right a:hover{*/
   /*color: white;*/
 /*}*/
-.div-riq{
-  width: 200px;
-  display: inline-block;
-  line-height: 48px;
-  margin-left: -70px;
-}
+/*.div-riq{*/
+  /*display: inline;*/
+  /*!*margin: 0 auto;*!*/
+  /*!*width: 200px;*!*/
+  /*!*display: inline-block;*!*/
+  /*line-height: 48px;*/
+  /*!*margin-top: auto;*!*/
+/*}*/
 .div-top{
+  display: inline;
+  text-align: center;
+  /*margin: 0 auto;*/
   width: 200px;
-  margin-top: 8px;
-  height: 32px;
-
-  line-height: 48px;
-  display: inline-block;
-  border-right: 1px solid black;
-
+  /*margin-top: 0px;*/
+  /*margin-top: 8px;*/
+  /*height: 32px;*/
+  /*line-height: 48px;*/
+  /*display: inline-block;*/
+  /*border-right: 1px solid black;*/
 }
 .div-bottom{
-  display: inline-block;
-  line-height: 48px;
+  display: inline;
+  text-align: center;
+  /*margin: 0 auto;*/
+  width: 200px;
+  /*margin-top: 0px;*/
+  /*margin-leeft: 180px;*/
+  /*display: inline-block;*/
+  /*line-height: 48px;*/
+  /*width: 200px;*/
+  /*text-align: center;*/
   /*padding: 8px;*/
 }
 #contact-top{
-  position:relative;
+  /*position:relative;*/
 }
 #contact{
   display: inline-block;
@@ -411,6 +447,7 @@ a:hover{
     margin-top: 107px;
   }
   .font-font{
+    margin-left: -70px;
     font-size: 18px;
     padding: 0 0 22px 0;
     color: white;
@@ -430,30 +467,5 @@ a:hover{
     margin-top: -500px;
     margin-left: 800px;
   }
-  #down{
-    text-align: center;
-    margin-top: 1px;
-    color: white;
 
-  }
-  .down-div{
-    display: inline;
-    margin: 107px 0 0 0;
-    width: 275px;
-    font-size: 12px;
-    border-right: 1px solid white;
-  }
-  .down-div2{
-    display: inline;
-    padding: 4px;
-  }
-  #down-a{
-    margin: 0 auto;
-    display: inline;
-    font-size: 12px;
-    color: white;
-  }
-  #down-a:hover{
-    background-color: #fbb03b;
-  }
 </style>

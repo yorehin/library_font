@@ -5,8 +5,10 @@ import App from './App'
 import router from './router'
 import './assets/style.css'
 import '../static/font/iconfont.css'
-Vue.config.productionTip = false
+import Service from './components/service/ServiceP'
 
+Vue.config.productionTip = false
+Vue.component('ServiceP', Service)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

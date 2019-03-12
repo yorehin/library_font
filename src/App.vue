@@ -10,15 +10,26 @@
         <!--<div id="div-ul">-->
         <ul>
           <li><router-link to="">网站首页</router-link></li>
-          <li><router-link to="">产品服务</router-link></li>
+          <li id="li1"><router-link to="">产品服务
+            <!--<ul>-->
+              <!--<li><a>1</a></li>-->
+              <!--<li><a>2</a></li>-->
+              <!--<li><a>3</a></li>-->
+              <!--<li><a>4</a></li>-->
+              <!--<li><a>5</a></li>-->
+            <!--</ul>-->
+          </router-link></li>
           <li><router-link to="">最新产品</router-link></li>
           <li><router-link to="">关于我们</router-link></li>
           <li><router-link to="">联系我们</router-link></li>
-          <li><router-link to="">切换</router-link></li>
+          <li><router-link to="">切换 &nbsp;<i class="iconfont iconqiehuan"></i></router-link></li>
         </ul>
       </section>
     </nav>
     <router-view></router-view>
+    <footer>
+      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
+    </footer>
   </section>
 </template>
 
@@ -68,8 +79,54 @@ export default {
     text-decoration:none;
   }
 
+  /*#li1 > ul {*/
+    /*position: absolute;*/
+    /*display: none;*/
+  /*}*/
+  /*#li1 > ul > li {*/
+    /*float: none;*/
+  /*}*/
+  /*.mynav > ul > li:hover ul {*/
+    /*display: block;*/
+  /*}*/
+
   a:hover{
     color: #fbb03b;
     border-top: 5px #fbb03b solid;
   }
+
+  #down{
+    height: 60px;
+    text-align: center;
+    color: white;
+    background-color: #10103b;
+  }
+  .down-div{
+    line-height: 60px;
+    display: inline;
+    margin: 107px 0 0 0;
+    width: 275px;
+    font-size: 12px;
+    border-right: 1px solid white;
+  }
+  .down-div2{
+    display: inline;
+    padding: 4px;
+  }
+  #down-a{
+    margin: 0 auto;
+    display: inline;
+    font-size: 12px;
+    color: white;
+  }
+  #down-a:hover{
+    background-color: #fbb03b;
+  }
+  /*.kwehk{*/
+    /*position: absolute;*/
+    /*left: 0; top:50px;*/
+    /*width: 100%; background-color: #005580;*/
+    /*line-height: 33px;*/
+    /*display: none;*/
+  /*}*/
 </style>
