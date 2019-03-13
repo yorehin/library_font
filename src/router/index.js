@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/home/Home'
 import Service from '../components/service/ServiceP'
+import AboutUs from '../components/aboutUs/AboutUs'
+import ContactUs from '../components/contactUs/ContactUs'
 
 Vue.use(Router)
 
@@ -23,6 +25,16 @@ export default new Router({
       path: '/service',
       name: 'Service',
       component: Service
+    },
+    {
+      path: '/aboutUs',
+      name: 'AboutUs',
+      component: AboutUs
+    },
+    {
+      path: '/contactUs',
+      name: 'ContactUs',
+      component: ContactUs
     }
   ]
 })

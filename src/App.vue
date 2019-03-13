@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="section">
     <nav>
       <!--<div id="app">-->
       <!--<img src="assets/img/logo.png">-->
@@ -41,30 +41,38 @@ export default {
 
 <style scoped>
   nav{
-    background-color:rgba(0,0,0,0.2);
     position:fixed;
     height: 64px;
-    width: 100vw;
+    /*width: 1440px;*/
+    width: 100%;
+    background-color:rgba(0,0,0,0.2);
+    /*margin: 0 auto;*/
   }
+  /*.section{*/
+    /*background-color:rgba(0,0,0,0.2);*/
+    /*width: 100%;*/
+  /*}*/
   .mynav{
     margin: 0 auto;
-    width: 1440px;
+    /*width: 100vw;*/
     height: 64px;
+    width: 1200px;
+    max-width: 100%;
   }
   img{
     float: left;
-    margin-left: 130px;
+    /*margin-left: 130px;*/
     padding: 18px;
   }
   ul{
-    float: left;
+    float: right;
     /*position:absolute;*/
-    margin-left: 532px;
+    /*margin-left: 532px;*/
   }
   li{
     line-height: 64px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     /*width: 80px;*/
     margin-left: 10px;
     float:left;

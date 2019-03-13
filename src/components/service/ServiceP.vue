@@ -1,6 +1,6 @@
 <template>
 <div>
-  <img src="../../assets/img/home/轮播图1.png" height="937" width="100%"/>
+  <img src="../../assets/img/home/轮播图1.png" height="100%" width="100%"/>
   <div class="main">
     <div class="box0">
       <h1>手机APP设计开发</h1>
