@@ -33,17 +33,17 @@ export default {
         });
     })
   },
-  create_mes(params){
-    return new Promise((resolve,reject)=>{
-      axios.post(baseURL + 'create_mes',params)
-        .then((response) => {
-          resolve(response.data);
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    })
-  },
+  // create_mes(params){
+  //   return new Promise((resolve,reject)=>{
+  //     axios.post(baseURL + 'create_mes',params)
+  //       .then((response) => {
+  //         resolve(response.data);
+  //       })
+  //       .catch((error) => {
+  //         reject(error);
+  //       });
+  //   })
+  // },
   updateSort(params){
     return new Promise((resolve,reject)=>{
       axios.post(baseURL + 'updateSort',params)
@@ -57,7 +57,7 @@ export default {
   },
   login(params){
     return new Promise((resolve,reject)=>{
-      axios.post(baseURL + 'login',params)
+      axios.post(baseURL + 'adminLogin',params)
         .then((response) => {
           resolve(response.data);
         })

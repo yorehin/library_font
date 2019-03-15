@@ -9,23 +9,31 @@
         <img src="./assets/img/home/logoDay.png" height="30" width="80"/>
         <!--<div id="div-ul">-->
         <ul>
-          <li><router-link to="">网站首页</router-link></li>
-          <li id="li1"><router-link to="">产品服务
-            <!--<ul>-->
-              <!--<li><a>1</a></li>-->
-              <!--<li><a>2</a></li>-->
-              <!--<li><a>3</a></li>-->
-              <!--<li><a>4</a></li>-->
-              <!--<li><a>5</a></li>-->
-            <!--</ul>-->
+          <li><router-link to="/">网站首页</router-link></li>
+          <li id="li1"><router-link to="Service">产品服务
+            <ul class="ul">
+              <li class="li2"><a href="#service-app">手机APP设计开发</a></li>
+              <li class="li2"><a href="#service-Wechat">小程序设计开发</a></li>
+              <li class="li2"><a href="#service-web">WEB网站设计开发</a></li>
+              <li class="li2"><router-link to="Service/service-pc">PC客户端设计开发</router-link></li>
+              <li class="li2"><a href="#service-custom">软件定制开发</a></li>
+            </ul>
           </router-link></li>
-          <li><router-link to="">最新产品</router-link></li>
-          <li><router-link to="">关于我们</router-link></li>
-          <li><router-link to="">联系我们</router-link></li>
+          <li><router-link to="Product">最新产品
+            <ul class="ul">
+              <li class="li"><a>Excel小帮手-定制软件</a></li>
+              <li class="li"><a>汤阴县图书馆-WEB网站</a></li>
+              <li class="li"><a>斑点狗约课-小程序</a></li>
+            </ul></router-link></li>
+          <li><router-link to="AboutUs">关于我们</router-link></li>
+          <li><router-link to="ContactUs">联系我们</router-link></li>
           <li><router-link to="">切换 &nbsp;<i class="iconfont iconqiehuan"></i></router-link></li>
         </ul>
       </section>
     </nav>
+    <div class="div3"><i class="iconfont iconzhiding"></i></div>
+    <div class="div7"><i class="iconfont iconweixingongzhonghao"></i></div>
+    <div class="div8"><i class="iconfont iconzaixianzixun"></i></div>
     <router-view></router-view>
     <footer>
       <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
@@ -66,38 +74,55 @@ export default {
   }
   ul{
     float: right;
-    /*position:absolute;*/
-    /*margin-left: 532px;*/
   }
   li{
     line-height: 64px;
     text-align: center;
     font-size: 12px;
-    /*width: 80px;*/
     margin-left: 10px;
     float:left;
-    /*color: #0d0d2f;*/
     list-style:none;
     width: 80px;
     height: 64px;
+  }
+  li:hover ul{
+    display: block;
+    /*margin-left: -200px;*/
+    /*float: right;*/
+  }
+  .ul{
+    position: absolute;
+    display: none;
+  }
+  .li{
+    width: 128px;
+    float: left;
+  }
+  .li2{
+    width: 100px;
   }
   a{
     display: block;
     color: white;
     text-decoration:none;
   }
+  #li3 a:hover{}
 
   /*#li1 > ul {*/
     /*position: absolute;*/
     /*display: none;*/
   /*}*/
   /*#li1 > ul > li {*/
-    /*float: none;*/
+    /*float: left;*/
   /*}*/
   /*.mynav > ul > li:hover ul {*/
     /*display: block;*/
   /*}*/
 
+   #li1 a:hover{
+    color: #fbb03b;
+    border-top: 5px #fbb03b solid;
+  }
   a:hover{
     color: #fbb03b;
     border-top: 5px #fbb03b solid;
@@ -129,6 +154,69 @@ export default {
   }
   #down-a:hover{
     background-color: #fbb03b;
+  }
+  .div3{
+    margin-top: 47vh;
+    right: 20px;
+    position:fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #545454;
+    background-color: #bcbcbd;
+  }
+  .div7{
+    margin-top: 52vh;
+    right: 20px;
+    position:fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #545454;
+    background-color: #bcbcbd;
+  }
+  .div8{
+    margin-top: 57vh;
+    right: 20px;
+    position:fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #545454;
+    background-color: #bcbcbd;
+  }
+  .div3 i{
+    line-height: 40px;
+    position:fixed;
+    font-size: 22px;
+    margin-left: -9px;
+    /*right: 5px;*/
+    /*top: 100px;*/
+  }
+  .div7 i{
+    line-height: 40px;
+    position:fixed;
+    font-size: 22px;
+    margin-left: -9px;
+    /*right: 5px;*/
+    /*top: 100px;*/
+  }
+  .div8 i{
+    line-height: 40px;
+    position:fixed;
+    font-size: 22px;
+    margin-left: -9px;
+    /*right: 5px;*/
+    /*top: 100px;*/
+  }
+  #div-i{
+
   }
   /*.kwehk{*/
     /*position: absolute;*/

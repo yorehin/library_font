@@ -96,7 +96,7 @@
         <div class="look-code">扫码关注</div>
         <div class="use-code"><img src="../../assets/img/home/联系我们-二维码.png" height="220" width="220"/></div>
       </div>
-      <div class="right-img"><img src="../../assets/img/home/地图.png" height="498" width="700"/></div>a
+      <div class="right-img"><img src="../../assets/img/home/地图.png" height="498" width="700"/></div>
       <!--<ul>-->
       <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-Excel.png" height="300" width="360"/><div class="new-text">Excel小帮手-定制软件</div></div></div></li>-->
       <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-汤阴县图书馆.png" height="300" width="360"/><div class="new-text">汤阴县图书馆-WEB网站</div></div></div></li>-->
@@ -110,6 +110,20 @@
 </template>
 
 <script>
+  import bolosev from '../../service/bllosev.js'
+  import {baseURL} from '../common/globaldata'
+
+  export default {
+    name: 'home',
+    data() {
+      return {
+        times: []
+      }
+    },
+    created(){
+
+    }
+  }
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="../../assets/img/home/轮播图1.png" height="100%" width="100%"/>
+    <img src="../../assets/img/banner.png" height="100%" width="100%"/>
     <div id="father">
       <div class="son">
         <h1><div style="border-left:4px solid #0f1937">发展历程</div></h1>
@@ -38,20 +38,28 @@
 
 <style scoped>
   #father{
+    /*position: relative;*/
     width: 100%;
+    min-width: 100vw;
     height: 941px;
     display: block;
   }
   .son{
-    display: block;
-    margin-left: 370px;
-    margin-top: 118px;
+    /*position: absolute;*/
+    /*float: left;*/
+    margin: 118px auto 0;
+    /*text-align: center;*/
+    width: 1200px;
+    /*display: inline-block;*/
+    /*margin-left: 370px;*/
+    /*margin-top: 118px;*/
   }
 h1{
   font-size: 23px;
   color: #0f1937;
+  margin: 0 auto;
 }
-  div{
+  .son div{
     float: left;
   }
   .about-circular{

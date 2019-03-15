@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/public': {
+        // 测试环境http://dayu1.net/
+        target: 'http://dayu1.net',  // 接口域名
+        changeOrigin: true,  //是否跨域
+        pathRewrite: {
+          '^/public': '/public'   //需要rewrite重写的,
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

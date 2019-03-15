@@ -1,8 +1,8 @@
 <template>
 <div>
-  <img src="../../assets/img/home/轮播图1.png" height="100%" width="100%"/>
+  <img src="../../assets/img/banner.png" height="100%" width="100%"/>
   <div class="main">
-    <div class="box0">
+    <div class="box0" id="service-app">
       <h1>手机APP设计开发</h1>
       <h2>1、APP用户增长速度快、经济能力强，思维活跃。<br>
         2、APP可整合LBS、QR、AR等新技术，带给用户前所未有的用户体验。<br>
@@ -14,7 +14,7 @@
       <div><img  class="div-img" src="../../assets/img/service/产品服务-APP.png" height="186" width="186"/></div>
       <h3>创建属于自己的APP  》</h3>
     </div>
-    <div class="box0">
+    <div class="box0" id="service-Wechat">
       <div><img class="img-div" src="../../assets/img/service/产品服务-小程序.png" height="186" width="186"/></div>
       <h6>创建属于自己的小程序</h6>
       <h4>小程序开发设计</h4>
@@ -23,7 +23,7 @@
         3、微信是中国月活用户量最大用户活跃度最高的社交网络，小程序完全可以借助强大的社交网络来获客，有效地降低获客成本，从而降低企业的经营成本。
       </h5>
     </div>
-    <div class="box0" style="margin-top: 236px">
+    <div class="box0" style="margin-top: 236px" id="service-web">
       <h1>WEB网站设计开发</h1>
       <h2>1、展现企业形象，给用户留下强烈的印象。如果一个大企业连网站都没有，给用户留下的印象就是这不是一个现代的企业，是一个跟不上形势的企业。如果网站做得好的话，给用户留下的印象就是企业领导意识超前，技术走在最前端，这样给用户的信任也会很多。<br>
         2、方便储存资料。网站可以把公司的背景、实力、等等都可以毫无保留的体现出来，效果明显。<br>
@@ -33,7 +33,7 @@
       <div><img  class="div-img" src="../../assets/img/service/产品服务-WEB网站.png" height="186" width="186"/></div>
       <h3>创建属于自己的网站</h3>
     </div>
-    <div class="box0">
+    <div class="box0" id="service-pc">
       <div><img class="img-div" src="../../assets/img/service/产品服务-PC客户端.png" height="186" width="186"/></div>
       <h6>创建属于自己的PC客户端</h6>
       <h4>PC客户端设计开发</h4>
@@ -44,7 +44,7 @@
         因企业为独立的局域网络结构管理模式，PC端的有效避免了网络这前面相互干扰和泄漏企业的信息。
       </h5>
     </div>
-    <div class="box0" style="margin-top: 218px; margin-bottom: 0">
+    <div class="box0" style="margin-top: 218px; margin-bottom: 0" id="service-custom">
       <h1>定制软件设计与开发</h1>
       <h2>1、根据客户需要。<br>
       2。软硬件结合。</h2>
@@ -56,7 +56,11 @@
 
 <script>
   export default {
-    name: 'Service'
+    name: 'Service',
+  //   function onGetMessage(service-app){
+  //   service-app.innerHTML+=context;
+  //   service-app_end.scrollIntoView();
+  // }
   }
 </script>
 

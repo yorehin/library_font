@@ -3,14 +3,22 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/home/Home'
 import Service from '../components/service/ServiceP'
+import Product from '../components/product/Product'
 import AboutUs from '../components/aboutUs/AboutUs'
 import ContactUs from '../components/contactUs/ContactUs'
+import textnav from '../components/textnav'
+import Login from '../components/login/Login'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
+    {
+      path: '/textnav',
+      name: 'textnav',
+      component: textnav
+    },
     {
       path: '/helloworld',
       name: 'HelloWorld',
@@ -27,6 +35,11 @@ export default new Router({
       component: Service
     },
     {
+      path: '/product',
+      name: 'Product',
+      component: Product
+    },
+    {
       path: '/aboutUs',
       name: 'AboutUs',
       component: AboutUs
@@ -35,7 +48,17 @@ export default new Router({
       path: '/contactUs',
       name: 'ContactUs',
       component: ContactUs
-    }
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    // {
+    //   path: '/login',
+    //   name: 'Login',
+    //   component: Login
+    // }
   ]
 })
 // import Vue from 'vue'

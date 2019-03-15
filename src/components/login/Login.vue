@@ -1,35 +1,12 @@
 <template>
-  <section class="loginPage" >
-    <div id="login-back" class='login'>
-      <div class='login_title'>
-        <span>管理员登录</span>
-      </div>
-      <div class='login_fields'>
-        <div class='login_fields__user'>
-          <div class='icon'>
-            <img src='../../assets/img/user_icon_copy.png'>
-          </div>
-          <input v-model="username" placeholder='用户名' type='text'/>
-          <div class='validation'>
-            <img src='../../assets/img/tick.png'>
-          </div>
-        </div>
-        <div class='login_fields__password'>
-          <div class='icon'>
-            <img src='../../assets/img/lock_icon_copy.png'>
-          </div>
-          <input v-model="password" placeholder='密码' type='password'>
-          <div class='validation'>
-            <img src='../../assets/img/tick.png'>
-          </div>
-        </div>
-        <div class='login_fields__submit'>
-          <input id="submitAdmin" type='submit' value='登录'>
-          <div class='forgot'>
-            <a href='#'>忘记密码</a>
-          </div>
-        </div>
-      </div>
+  <header>
+  <div class="login-page">
+    <div class="form">
+      <form class="login-form"  onsubmit="return false;">
+        <input v-model="username" type="text" placeholder="username"/>
+        <input v-model="password" type="password" placeholder="password"/>
+        <button id="login-button" >login</button>
+      </form>
       <div id="success-div" class='success'>
         <h2>登录成功</h2>
         <p>欢迎登录后台</p>
@@ -39,17 +16,14 @@
         <p>用户名密码有误</p>
         <a class="reload" href="javascript:;" onclick="location.reload()">重新登录</a>
       </div>
-      <div class='disclaimer'>
-        <p>只允许图书馆管理员登录.</p>
-      </div>
     </div>
-  </section>
+  </div>
+  </header>
 </template>
 
 <script>
-  import "./Login.scss"
   import $ from 'jquery'
-  import bolosev from '../../service/bolosev'
+  import bolosev from '../../service/bllosev'
 
   export default {
     name: 'Login',
@@ -60,73 +34,142 @@
       }
     },
     mounted() {
-      $('#submitAdmin').click(()=>{
-        console.log('---------',this.username,this.password)
-        if (this.username&&this.password){
-          $('#login-back').addClass('test')
-          setTimeout(function(){
-            $('#login-back').addClass('testtwo')
-          },300);
-          setTimeout(function(){
-            $(".authent").show().animate({right:-320},{easing : 'easeOutQuint' ,duration: 600, queue: false });
-            $(".authent").animate({opacity: 1},{duration: 200, queue: false }).addClass('visible');
-          },500);
-          bolosev.login({password:this.password,email:this.username}).then(res=>{
-            $(".authent").show().animate({right:90},{easing : 'easeOutQuint' ,duration: 600, queue: false });
-            $(".authent").animate({opacity: 0},{duration: 200, queue: false }).addClass('visible');
-            $('#login-back').removeClass('testtwo')
-            $('#login-back').removeClass('test')
-            $('#login-back div').fadeOut(123);
-            if (res.code==0)
-            {
-              $('#success-div').fadeIn();
-              setTimeout(()=>{
-                this.$router.push('/Back/Nav')
-              },1000)
-            }
-            else
-            {
-              $('#fail-div').fadeIn();
-            }
-          })
-        }
-        else
-        {
-          this.$notify({
-            title: '提示',
-            message: '请填写用户名密码',
-            type: 'warning',
-            offset: 100
-          });
-        }
-
-      });
-
-      $('input[type="text"],input[type="password"]').focus(function(){
-        $(this).prev().animate({'opacity':'1'},200)
-      });
-      $('input[type="text"],input[type="password"]').blur(function(){
-        $(this).prev().animate({'opacity':'.5'},200)
-      });
-
-      $('input[type="text"],input[type="password"]').keyup(function(){
-        if(!$(this).val() == ''){
-          $(this).next().animate({'opacity':'1','right' : '30'},200)
-        } else {
-          $(this).next().animate({'opacity':'0','right' : '20'},200)
-        }
-      });
+      alert(0)
+      $("#login-button").click((event)=> {
+        bolosev.login({password: this.password, username: this.username}).then(res => {
+          if (res.code == 0) {
+            alert(this.password)
+            $('#success-div').fadeIn();
+            setTimeout(() => {
+              this.$router.push('/Back/Nav')
+            }, 1000)
+          } else {
+            alert(2)
+            $('#fail-div').fadeIn();
+          }
+        })
+      })
+      // $("#login-button").click(function (event) {
+      //   bolosev.login({password: this.password, email: this.username}).then(res => {
+      //     if (res.code == 0) {
+      //       alert(1)
+      //       $('#success-div').fadeIn();
+      //       setTimeout(() => {
+      //         this.$router.push('/Back/Nav')
+      //       }, 1000)
+      //     } else {
+      //       alert(2)
+      //       $('#fail-div').fadeIn();
+      //     }
+      //   })
+      // })
     },
-    methods: {
-
-    },
-    beforeDestroy() {
-      console.log('--------------离开之前销毁定时器')
-    },
+    methods:{
+      toLogin(){
+        alert(1)
+      }
+    }
   }
 </script>
+<style scoped>
+  @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-<style lang="scss" scoped>
-  @import "../../assets/css/sass-base";
-
+  .login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    /*-webkit-transition: all 0.3 ease;*/
+    /*transition: all 0.3 ease;*/
+    cursor: pointer;
+  }
+  .form button:hover,.form button:active,.form button:focus {
+    background: #43A047;
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+  .form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  .form .register-form {
+    display: none;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .container:before, .container:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .container .info {
+    margin: 50px auto;
+    text-align: center;
+  }
+  .container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+  }
+  .container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+  }
+  .container .info span a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .container .info span .fa {
+    color: #EF3B3A;
+  }
+  header {
+    background: #76b852; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #76b852, #8DC26F);
+    background: -o-linear-gradient(right, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>
