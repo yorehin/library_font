@@ -23,11 +23,10 @@
         <img id="son1-img" src="../../assets/img/aboutUs/企业文化.png" height="45" width="45"/>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
       </div>
+      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
         <div class="back1">
       </div>
-      <div>
 
-      </div>
     </div>
   </div>
 </template>
@@ -39,6 +38,31 @@
 </script>
 
 <style scoped>
+  .down-div2{
+    display: inline;
+  }
+  #down-a{
+    display: inline;
+    font-size: 3px;
+    color: white;
+  }
+  #down-a:hover{
+    background-color: #fbb03b;
+  }
+  #down{
+    height: 15px;
+    text-align: center;
+    color: black;
+    /*background-color: #10103b;*/
+  }
+  .down-div{
+    line-height: 15px;
+    display: inline;
+    /*margin: 54px 0 0 0;*/
+    /*width: 60px;*/
+    font-size: 3px;
+    border-right: 1px solid black;
+  }
   #div-id{
     float: left;
     display: inline-block;
@@ -144,9 +168,9 @@
     font-size: 14px;
     /*letter-spacing:1.5px;*/
     /*float: left;*/
-    width: 70vw;
+    width: 75vw;
     line-height: 25px;
-    margin-top: -30px;
+    margin-top: -20px;
   }
   #son1-img{
     margin-left: 7px;
