@@ -1,50 +1,50 @@
 <template>
-  <!--<section class="section">-->
-    <!--<nav>-->
+  <section class="section">
+    <nav>
       <!--<div id="app">-->
       <!--<img src="assets/img/logo.png">-->
       <!--<router-view/>-->
-      <!--<section class="mynav" >-->
-        <!--&lt;!&ndash;导航&ndash;&gt;-->
-        <!--<img src="./assets/img/home/logoDay.png" height="30" width="80"/>-->
-        <!--&lt;!&ndash;<div id="div-ul">&ndash;&gt;-->
-        <!--<ul>-->
-          <!--<li><router-link to="/">网站首页</router-link></li>-->
-          <!--<li id="li1"><router-link to="Service">产品服务-->
-            <!--<ul class="ul">-->
-              <!--<li class="li2"><a href="#service-app">手机APP设计开发</a></li>-->
-              <!--<li class="li2"><a href="#service-Wechat">小程序设计开发</a></li>-->
-              <!--<li class="li2"><a href="#service-web">WEB网站设计开发</a></li>-->
-              <!--<li class="li2"><router-link to="Service/service-pc">PC客户端设计开发</router-link></li>-->
-              <!--<li class="li2"><a href="#service-custom">软件定制开发</a></li>-->
-            <!--</ul>-->
-          <!--</router-link></li>-->
-          <!--<li><router-link to="Product">最新产品-->
-            <!--<ul class="ul">-->
-              <!--<li class="li"><a>Excel小帮手-定制软件</a></li>-->
-              <!--<li class="li"><a>汤阴县图书馆-WEB网站</a></li>-->
-              <!--<li class="li"><a>斑点狗约课-小程序</a></li>-->
-            <!--</ul></router-link></li>-->
-          <!--<li><router-link to="AboutUs">关于我们</router-link></li>-->
-          <!--<li><router-link to="ContactUs">联系我们</router-link></li>-->
-          <!--<li><router-link to="">切换 &nbsp;<i class="iconfont iconqiehuan"></i></router-link></li>-->
-        <!--</ul>-->
-      <!--</section>-->
-    <!--</nav>-->
-    <!--<div class="div3"><i class="iconfont iconzhiding"></i></div>-->
-    <!--<div class="div7"><i class="iconfont iconweixingongzhonghao"></i></div>-->
-    <!--<div class="div8"><i class="iconfont iconzaixianzixun"></i></div>-->
+      <section class="mynav" >
+        <!--导航-->
+        <img src="../assets/img/home/logoDay.png" height="30" width="80"/>
+        <!--<div id="div-ul">-->
+        <ul>
+          <li><router-link to="/">网站首页</router-link></li>
+          <li id="li1"><router-link to="Service">产品服务
+            <ul class="ul">
+              <li class="li2"><router-link>手机APP设计开发</router-link></li>
+              <li class="li2"><router-link>小程序设计开发</router-link></li>
+              <li class="li2"><router-link>WEB网站设计开发</router-link></li>
+              <li class="li2"><router-link to="Service/service-pc">PC客户端设计开发</router-link></li>
+              <li class="li2"><router-link>软件定制开发</router-link></li>
+            </ul>
+          </router-link></li>
+          <li><router-link to="Product">最新产品
+            <ul class="ul">
+              <li class="li"><a>Excel小帮手-定制软件</a></li>
+              <li class="li"><a>汤阴县图书馆-WEB网站</a></li>
+              <li class="li"><a>斑点狗约课-小程序</a></li>
+            </ul></router-link></li>
+          <li><router-link to="AboutUs">关于我们</router-link></li>
+          <li><router-link to="ContactUs">联系我们</router-link></li>
+          <li><router-link to="">切换 &nbsp;<i class="iconfont iconqiehuan"></i></router-link></li>
+        </ul>
+      </section>
+    </nav>
+    <div class="div3"><i class="iconfont iconzhiding"></i></div>
+    <div class="div7"><i class="iconfont iconweixingongzhonghao"></i></div>
+    <div class="div8"><i class="iconfont iconzaixianzixun"></i></div>
     <router-view></router-view>
-    <!--<footer>-->
-      <!--<div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>-->
-    <!--</footer>-->
-  <!--</section>-->
+    <footer>
+      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
+    </footer>
+  </section>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  export default {
+    name: 'Pc'
+  }
 </script>
 
 <style scoped>
@@ -57,8 +57,8 @@ export default {
     /*margin: 0 auto;*/
   }
   /*.section{*/
-    /*background-color:rgba(0,0,0,0.2);*/
-    /*width: 100%;*/
+  /*background-color:rgba(0,0,0,0.2);*/
+  /*width: 100%;*/
   /*}*/
   .mynav{
     margin: 0 auto;
@@ -109,17 +109,17 @@ export default {
   #li3 a:hover{}
 
   /*#li1 > ul {*/
-    /*position: absolute;*/
-    /*display: none;*/
+  /*position: absolute;*/
+  /*display: none;*/
   /*}*/
   /*#li1 > ul > li {*/
-    /*float: left;*/
+  /*float: left;*/
   /*}*/
   /*.mynav > ul > li:hover ul {*/
-    /*display: block;*/
+  /*display: block;*/
   /*}*/
 
-   #li1 a:hover{
+  #li1 a:hover{
     color: #fbb03b;
     border-top: 5px #fbb03b solid;
   }
@@ -219,10 +219,10 @@ export default {
 
   }
   /*.kwehk{*/
-    /*position: absolute;*/
-    /*left: 0; top:50px;*/
-    /*width: 100%; background-color: #005580;*/
-    /*line-height: 33px;*/
-    /*display: none;*/
+  /*position: absolute;*/
+  /*left: 0; top:50px;*/
+  /*width: 100%; background-color: #005580;*/
+  /*line-height: 33px;*/
+  /*display: none;*/
   /*}*/
 </style>

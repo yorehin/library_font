@@ -23,7 +23,7 @@
 
 <script>
   import $ from 'jquery'
-  import bolosev from '../../service/bllosev'
+  import bolosev from '../service/bllosev'
 
   export default {
     name: 'Login',
@@ -34,17 +34,14 @@
       }
     },
     mounted() {
-      alert(0)
       $("#login-button").click((event)=> {
         bolosev.login({password: this.password, username: this.username}).then(res => {
           if (res.code == 0) {
-            alert(this.password)
             $('#success-div').fadeIn();
             setTimeout(() => {
               this.$router.push('/Back/Nav')
             }, 1000)
           } else {
-            alert(2)
             $('#fail-div').fadeIn();
           }
         })

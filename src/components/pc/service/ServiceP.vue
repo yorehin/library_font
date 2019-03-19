@@ -1,6 +1,6 @@
 <template>
 <div>
-  <img src="../../assets/img/banner.png" height="100%" width="100%"/>
+  <img src="../../../assets/img/banner.png" height="100%" width="100%"/>
   <div class="main">
     <div class="box0" id="service-app">
       <h1>手机APP设计开发</h1>
@@ -11,11 +11,11 @@
         5、通过新技术以及数据分析，APP可实现精准定位企业目标用户，实现低成本快速增长成为可能。<br>
         6、用户手机安装APP以后，企业即埋下一颗种子，可持续与用户保持联系。
       </h2>
-      <div><img  class="div-img" src="../../assets/img/service/产品服务-APP.png" height="186" width="186"/></div>
+      <div><img class="div-img" src="../../../assets/img/service/产品服务-APP.png" height="186" width="186"/></div>
       <h3>创建属于自己的APP  》</h3>
     </div>
     <div class="box0" id="service-Wechat">
-      <div><img class="img-div" src="../../assets/img/service/产品服务-小程序.png" height="186" width="186"/></div>
+      <div><img class="img-div" src="../../../assets/img/service/产品服务-小程序.png" height="186" width="186"/></div>
       <h6>创建属于自己的小程序</h6>
       <h4>小程序开发设计</h4>
       <h5>1、小程序是企业实现互联网+以及转型新零售的最佳选择，企业不需要组建单独的IT部门，甚至不需要雇佣单独的IT方面的人才，不需要买大型的服务器，不需要专门开发原生APP。只要到微信公众平台注册一个帐号，之后提交认证的相关资料，就可以根据自己企业的需要，着手定制一个完全不逊色于原生APP体验的微信小程序。<br>
@@ -30,11 +30,11 @@
         3、挖掘潜在客户。收集客户意见，与客户即时联系，有效地留住了客户，增加了成功的机会。<br>
         4、方便宣传产品。企业网站就可以提供一个展现的窗口，让客户有产品，企业的信息都可以得到展现，让客户可以通过搜索引擎来找到需要的产品。
       </h2>
-      <div><img  class="div-img" src="../../assets/img/service/产品服务-WEB网站.png" height="186" width="186"/></div>
+      <div><img class="div-img" src="../../../assets/img/service/产品服务-WEB网站.png" height="186" width="186"/></div>
       <h3>创建属于自己的网站</h3>
     </div>
     <div class="box0" id="service-pc">
-      <div><img class="img-div" src="../../assets/img/service/产品服务-PC客户端.png" height="186" width="186"/></div>
+      <div><img class="img-div" src="../../../assets/img/service/产品服务-PC客户端.png" height="186" width="186"/></div>
       <h6>创建属于自己的PC客户端</h6>
       <h4>PC客户端设计开发</h4>
       <h5>1、稳定性能高。企业只要将显卡插入电脑主机，安装好电脑分机，多个电脑，可运行相同或不同程序，互不干扰，处理速度不受影响。<br>
@@ -48,7 +48,7 @@
       <h1>定制软件设计与开发</h1>
       <h2>1、根据客户需要。<br>
       2。软硬件结合。</h2>
-      <div><img src="../../assets/img/service/产品服务-软件定制.png" height="186" width="186"/></div>
+      <div><img src="../../../assets/img/service/产品服务-软件定制.png" height="186" width="186"/></div>
     </div>
   </div>
 </div>

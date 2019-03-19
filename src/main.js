@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import './assets/style.css'
 import '../static/font/iconfont.css'
-import Service from './components/service/ServiceP'
-import Product from './components/product/Product'
-import ContactUs from './components/contactUs/ContactUs'
-import AboutUs from './components/aboutUs/AboutUs'
-import Login from './components/login/Login'
+import Service from './components/pc/service/ServiceP'
+import Product from './components/pc/product/Product'
+import ContactUs from './components/pc/contactUs/ContactUs'
+import AboutUs from './components/pc/aboutUs/AboutUs'
+import Login from './components/Login'
 
 Vue.config.productionTip = false
 Vue.component('ServiceP', Service)

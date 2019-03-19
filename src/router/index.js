@@ -1,64 +1,120 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Home from '@/components/home/Home'
-import Service from '../components/service/ServiceP'
-import Product from '../components/product/Product'
-import AboutUs from '../components/aboutUs/AboutUs'
-import ContactUs from '../components/contactUs/ContactUs'
-import textnav from '../components/textnav'
-import Login from '../components/login/Login'
+// import HelloWorld from '@/components/HelloWorld'
+// import textnav from '../components/textnav'
+import Home from '@/components/pc/home/Home'
+import Service from '../components/pc/service/ServiceP'
+import Product from '../components/pc/product/Product'
+import AboutUs from '../components/pc/aboutUs/AboutUs'
+import ContactUs from '../components/pc/contactUs/ContactUs'
+import Login from '../components/Login'
+import Pc from '../components/Pc'
+import phone from '../components/Phone'
+import home from '../components/mobile/home'
+import aboutus from '../components/mobile/aboutus'
+import contractus from '../components/mobile/contractus'
+import product from '../components/mobile/product'
+import service from '../components/mobile/service'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/textnav',
-      name: 'textnav',
-      component: textnav
-    },
-    {
-      path: '/helloworld',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
+    // {
+    //   path: '/textnav',
+    //   name: 'textnav',
+    //   component: textnav
+    // },
+    // {
+    //   path: '/helloworld',
+    //   name: 'HelloWorld',
+    //   component: HelloWorld
+    // },
     {
       path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/service',
-      name: 'Service',
-      component: Service
-    },
-    {
-      path: '/product',
-      name: 'Product',
-      component: Product
-    },
-    {
-      path: '/aboutUs',
-      name: 'AboutUs',
-      component: AboutUs
-    },
-    {
-      path: '/contactUs',
-      name: 'ContactUs',
-      component: ContactUs
+      name: 'Pc',
+      component: Pc,
+      props: true,
+      redirect: '/',
+      children: [
+        {
+          path: '/aboutUs',
+          name: 'AboutUs',
+          component: AboutUs
+        },
+        {
+          path: '/contactUs',
+          name: 'ContactUs',
+          component: ContactUs
+        },
+        {
+          path: '/login',
+          name: 'Login',
+          component: Login
+        },
+        {
+          path: '/home',
+          name: 'Home',
+          component: Home
+        },
+        {
+          path: '/product',
+          name: 'Product',
+          component: Product
+        },
+        {
+          path: '/service',
+          name: 'Service',
+          component: Service
+        },
+      ]
     },
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      props: true,
+      redirect: '/',
+      children: []
+
     },
-    // {
-    //   path: '/login',
-    //   name: 'Login',
-    //   component: Login
-    // }
+    {
+      path: '/phone',
+      name: 'phone',
+      component: phone,
+      props: true,
+      // redirect: '/',
+      children: [
+        {
+          path: 'home',
+          name: 'home',
+          component: home
+        },
+        {
+          path: 'aboutus',
+          name: 'aboutus',
+          component: aboutus
+        },
+        {
+          path: 'contractus',
+          name: 'contractus',
+          component: contractus
+        },
+        {
+          path: 'product',
+          name: 'product',
+          component: product
+        },
+        {
+          path: 'service',
+          name: 'service',
+          component: service
+        },
+      ]
+
+    },
+
   ]
 })
 // import Vue from 'vue'

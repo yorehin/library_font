@@ -1,10 +1,10 @@
 <template>
   <div>
-    <img src="../../assets/img/banner.png" height="100%" width="100%"/>
+    <img src="../../../assets/img/banner.png" height="100%" width="100%"/>
     <div id="father">
       <div class="son">
         <h1><div style="border-left:4px solid #0f1937">发展历程</div></h1>
-        <img class="class-img" src="../../assets/img/aboutUs/发展历程.png" height="90" width="90"/>
+        <img class="class-img" src="../../../assets/img/aboutUs/发展历程.png" height="90" width="90"/>
         <div class="border2"></div>
         <div class="border"></div>
         <div class="border"></div>
@@ -18,14 +18,16 @@
       </div>
 
     </div>
-    <div>
-      <h1><div style="border-right:4px solid #0f1937">企业文化</div></h1>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
-      <img src="../../assets/img/aboutUs/企业文化.png" height="90" width="90"/></div>
-    <div class="back1">
-    </div>
-    <div>
+    <div class="father">
+      <div class="son1">
+        <h1><div id="div-id" style="border-right:4px solid #0f1937">企业文化</div></h1><br>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
+        <img id="son1-img" src="../../../assets/img/aboutUs/企业文化.png" height="90" width="90"/></div>
+        <div class="back1">
+        </div>
+        <div>
 
+        </div>
     </div>
   </div>
 </template>
@@ -37,6 +39,12 @@
 </script>
 
 <style scoped>
+  #div-id{
+    float: right;
+    display: inline-block;
+    margin-left: 100px;
+    /*margin-left: 100px;*/
+  }
   #father{
     /*position: relative;*/
     width: 100%;
@@ -53,6 +61,10 @@
     /*display: inline-block;*/
     /*margin-left: 370px;*/
     /*margin-top: 118px;*/
+  }
+  .son1{
+    width: 1200px;
+    margin: 0 auto;
   }
 h1{
   font-size: 23px;
@@ -133,6 +145,16 @@ h1{
     margin-top: -100px;
     margin-left: 787px;
     font-size: 18px;
+  }
+  p{
+    float: left;
+    width: 25vw;
+
+    margin-left: 300px;
+  }
+  #son1-img{
+    margin-left: 320px;
+    margin-top: 40px;
   }
   /*.back1{*/
     /*z-index: 1000;*/
