@@ -8,7 +8,7 @@ import Product from '../components/pc/product/Product'
 import AboutUs from '../components/pc/aboutUs/AboutUs'
 import ContactUs from '../components/pc/contactUs/ContactUs'
 import Login from '../components/Login'
-import Pc from '../components/Pc'
+import Pc from '../components/pc/Pc'
 import phone from '../components/Phone'
 import home from '../components/mobile/home'
 import aboutus from '../components/mobile/aboutus'
@@ -36,7 +36,7 @@ export default new Router({
       name: 'Pc',
       component: Pc,
       props: true,
-      redirect: '/Home',
+      redirect: '/home',
       children: [
         {
           path: '/aboutUs',

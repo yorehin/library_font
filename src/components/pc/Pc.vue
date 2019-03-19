@@ -6,7 +6,7 @@
       <!--<router-view/>-->
       <section class="mynav" >
         <!--导航-->
-        <img src="../assets/img/home/logoDay.png" height="30" width="80"/>
+        <img src="../../assets/img/home/logoDay.png" height="30" width="80"/>
         <!--<div id="div-ul">-->
         <ul>
           <li><router-link to="/">网站首页</router-link></li>
