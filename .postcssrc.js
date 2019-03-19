@@ -12,7 +12,7 @@ module.exports = {
       viewportUnit: 'vw',
       selectorBlackList: ['.ignore', '.hairlines'],
       minPixelValue: 1,
-      exclude: /(\/|\\)(src\/components\/pc)(\/|\\)/,
+      exclude: /(\/|\\)(src)(\/|\\)/,
       mediaQuery: false
     }
   }
