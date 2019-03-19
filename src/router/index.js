@@ -36,7 +36,7 @@ export default new Router({
       name: 'Pc',
       component: Pc,
       props: true,
-      redirect: '/home',
+      redirect: '/',
       children: [
         {
           path: '/aboutUs',
@@ -54,7 +54,7 @@ export default new Router({
           component: Login
         },
         {
-          path: '/home',
+          path: '/',
           name: 'Home',
           component: Home
         },
