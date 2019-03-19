@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div id="li1"></div>
     <img src="../../assets/mobile/home/轮播图1.png" height="100%" width="100%"/>
     <div id="father">
       <div style="border-left:2px solid #fbb03b;margin: 12px 0 13px 10px;padding-left: 7px">发展历程</div>
@@ -38,6 +39,11 @@
 </script>
 
 <style scoped>
+  #li1{
+    height: 44px;
+    color: white;
+    background-color: #0d0d2f;
+  }
   .down-div2{
     display: inline;
   }
