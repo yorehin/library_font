@@ -16,6 +16,8 @@ import contractus from '../components/mobile/contractus'
 import product from '../components/mobile/product'
 import service from '../components/mobile/service'
 import back from '../components/back/back'
+import history from '../components/back/history'
+import info from '../components/back/info'
 
 Vue.use(Router)
 
@@ -114,20 +116,20 @@ export default new Router({
       path: '/back',
       name: 'back',
       component: back,
-      props: true,
+      // props: true,
       // redirect: '/',
-      // children: [
-      //   {
-      //     path: 'history',
-      //     name: 'history',
-      //     component: history
-      //   },
-      //   {
-      //     path: 'info',
-      //     name: 'info',
-      //     component: info
-      //   },
-      // ]
+      children: [
+        {
+          path: 'history',
+          name: 'history',
+          component: history
+        },
+        {
+          path: 'info',
+          name: 'info',
+          component: info
+        },
+      ]
     },
   ]
 })

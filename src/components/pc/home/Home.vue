@@ -9,7 +9,7 @@
         </div>
       </div>
     <div id="productContext">
-      <ul>
+      <ul class="product-ul" >
         <li><router-link to=""><div class="li-div1"><div class="phone">手机APP设计开发</div><i class="iconfont iconappkaifa"></i><div class="lj1">了解详情</div></div></router-link></li>
         <li><router-link to=""><div class="li-div1"><div class="phone">小程序设计开发</div><i class="iconfont icon_huabanfuben"></i><div class="lj1">了解详情</div></div></router-link></li>
         <li><router-link to=""><div class="li-div1"><div class="phone">WEB网站设计开发</div><i class="iconfont iconwangzhan"></i><div class="lj1">了解详情</div></div></router-link></li>
@@ -224,15 +224,22 @@ i{
     border: 1px solid #10103b;
     color: #10103b;
   }
-a{
-  display: block;
-  color: black;
-  text-decoration:none;
-}
-a:hover{
+  .product-ul a{
+    display: block;
+    color: black;
+    text-decoration:none;
+  }
+.product-ul a:hover{
   background-color: #fbb03b;
-  color: #fff;
+  color: red;
 }
+.product-ul a:hover div,.product-ul a:hover i{
+  color: white;
+}
+  .product-ul a:hover>.li-div1>div:last-child{
+    border-color: white;
+  }
+
   #new{
     display: inline-block;
     font-size: 30px;
