@@ -1,6 +1,6 @@
 <template>
 <div>
-  <img src="../../../assets/img/home/轮播图1.png" height="100%" width="100%"/>
+  <img src="../../../assets/img/home/home_tranform1.png" height="100%" width="100%"/>
   <div id="product">
     <div id="productService"><h1>产品服务</h1></div>
       <div id="productE">
@@ -20,7 +20,7 @@
   </div>
 
 
-  <!--<img src="../../assets/img/home/首页-最新产品背景图.png" height="100%" width="100%"/>-->
+  <!--<img src="../../assets/img/home/home_back.png" height="100%" width="100%"/>-->
   <div id="new">
     <div class="newProduct0"><h1>最新产品</h1></div>
     <div class="newProduct1">
@@ -33,15 +33,15 @@
         <li>
           <div class="li-div2">
             <div class="compute">
-              <img src="../../../assets/img/home/首页-最新产品-Excel.png" height="300" width="360"/>
+              <img src="../../../assets/img/home/home_excel.png" height="300" width="360"/>
               <div class="new-text">Excel小帮手-定制软件</div>
             </div>
           </div>
         </li>
-        <li><div class="li-div2"><div class="compute"><img src="../../../assets/img/home/首页-最新产品-汤阴县图书馆.png" height="300" width="360"/><div class="new-text">汤阴县图书馆-WEB网站</div></div></div></li>
-        <li><div class="li-div2"><div class="compute"><img src="../../../assets/img/home/首页-最新产品-斑点狗.png" height="300" width="360"/><div class="new-text">斑点狗约课-小程序</div></div></div></li>
+        <li><div class="li-div2"><div class="compute"><img src="../../../assets/img/home/home_lib.png" height="300" width="360"/><div class="new-text">汤阴县图书馆-WEB网站</div></div></div></li>
+        <li><div class="li-div2"><div class="compute"><img src="../../../assets/img/home/home_wechat.png" height="300" width="360"/><div class="new-text">斑点狗约课-小程序</div></div></div></li>
       </ul>
-      <div id="div-img"><img src="../../../assets/img/home/首页最新产品指示球.png" height="48" width="48"/></div>
+      <div id="div-img"><img src="../../../assets/img/home/home_back.png" height="48" width="48"/></div>
       <div id="div-text"><div>&nbsp;查看更多<i class="iconfont icongengduo" style="color: white; font-size: 23px; margin-left: 2px"></i></div></div>
     </div>
   </div>
@@ -94,9 +94,9 @@
         <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
         <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
         <div class="look-code">扫码关注</div>
-        <div class="use-code"><img src="../../../assets/img/home/联系我们-二维码.png" height="220" width="220"/></div>
+        <div class="use-code"><img src="../../../assets/img/home/home_contactQR.png" height="220" width="220"/></div>
       </div>
-      <div class="right-img"><img src="../../../assets/img/home/地图.png" height="498" width="700"/></div>
+      <div class="right-img"><img src="../../../assets/img/home/home_map.png" height="498" width="700"/></div>
       <!--<ul>-->
       <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-Excel.png" height="300" width="360"/><div class="new-text">Excel小帮手-定制软件</div></div></div></li>-->
       <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-汤阴县图书馆.png" height="300" width="360"/><div class="new-text">汤阴县图书馆-WEB网站</div></div></div></li>-->
@@ -241,7 +241,7 @@ a:hover{
     /*max-width: 100%;*/
     max-height: 100vh;
     min-height: 744px;
-    background-image: url("../../../assets/img/home/首页-最新产品背景图.png");
+    background-image: url("../../../assets/img/home/home_back.png");
   }
   .newProduct0{
     color: white;
@@ -524,7 +524,7 @@ a:hover{
     margin-left: -818px;
   }
   .right-img{
-    position:absolute;
+    /*position:absolute;*/
     margin-top: -500px;
     margin-left: 500px;
   }

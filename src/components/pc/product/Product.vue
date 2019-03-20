@@ -2,11 +2,11 @@
   <div>
     <img src="../../../assets/img/banner.png" height="100%" width="100%"/>
     <div class="product-div">
-      <img src="../../../assets/img/product/最新产品列表-Excel.png" height="302" width="362"/>
-      <img src="../../../assets/img/product/最新产品列表-斑点狗.png" height="302" width="362"/>
-      <img src="../../../assets/img/product/最新产品列表-图书馆.png" height="302" width="362"/>
-      <img src="../../../assets/img/product/最新产品列表-导览.png" height="302" width="362"/>
-      <img src="../../../assets/img/product/最新产品列表-微信公众号.png" height="302" width="362"/>
+      <img src="../../../assets/img/product/product_excel.png" height="302" width="362"/>
+      <img src="../../../assets/img/product/product_dog.png" height="302" width="362"/>
+      <img src="../../../assets/img/product/product_lib.png" height="302" width="362"/>
+      <img src="../../../assets/img/product/product_nav.png" height="302" width="362"/>
+      <img src="../../../assets/img/product/product_wechat.png" height="302" width="362"/>
 
     </div>
   </div>

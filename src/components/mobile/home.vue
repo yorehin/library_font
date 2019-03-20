@@ -72,10 +72,10 @@
           <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;电话:155-3723-2100</div>
           <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
           <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
-          <div class="use-code"><img src="../../assets/img/home/联系我们-二维码.png" height="109" width="109"/></div>
+          <div class="use-code"><img src="../../assets/img/home/home_contactQR.png" height="109" width="109"/></div>
           <div class="look-code">扫码关注</div>
         </div>
-        <div class="right-img"><img src="../../assets/img/home/地图.png" height="250" width="350"/></div>
+        <div class="right-img"><img src="../../assets/img/home/home_map.png" height="250" width="350"/></div>
       </div>
 
     </div>

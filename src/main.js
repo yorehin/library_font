@@ -9,7 +9,7 @@ import Service from './components/pc/service/ServiceP'
 import Product from './components/pc/product/Product'
 import ContactUs from './components/pc/contactUs/ContactUs'
 import AboutUs from './components/pc/aboutUs/AboutUs'
-import Login from './components/Login'
+import Login from './components/back/Login'
 
 Vue.config.productionTip = false
 Vue.component('ServiceP', Service)

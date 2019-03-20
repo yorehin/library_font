@@ -4,7 +4,7 @@
     <div id="father">
       <div class="son">
         <h1><div style="border-left:4px solid #0f1937">发展历程</div></h1>
-        <img class="class-img" src="../../../assets/img/aboutUs/发展历程.png" height="90" width="90"/>
+        <img class="class-img" src="../../../assets/img/aboutUs/about_history.png" height="90" width="90"/>
         <div class="border2"></div>
         <div class="border"></div>
         <div class="border"></div>
@@ -22,7 +22,7 @@
       <div class="son1">
         <h1><div id="div-id" style="border-right:4px solid #0f1937">企业文化</div></h1><br>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
-        <img id="son1-img" src="../../../assets/img/aboutUs/企业文化.png" height="90" width="90"/></div>
+        <img id="son1-img" src="../../../assets/img/aboutUs/about_culture.png" height="90" width="90"/></div>
         <div class="back1">
         </div>
         <div>

@@ -7,7 +7,7 @@ import Service from '../components/pc/service/ServiceP'
 import Product from '../components/pc/product/Product'
 import AboutUs from '../components/pc/aboutUs/AboutUs'
 import ContactUs from '../components/pc/contactUs/ContactUs'
-import Login from '../components/Login'
+import Login from '../components/back/Login'
 import Pc from '../components/pc/Pc'
 import phone from '../components/Phone'
 import home from '../components/mobile/home'
@@ -49,11 +49,6 @@ export default new Router({
           component: ContactUs
         },
         {
-          path: '/login',
-          name: 'Login',
-          component: Login
-        },
-        {
           path: '/',
           name: 'Home',
           component: Home
@@ -71,11 +66,11 @@ export default new Router({
       ]
     },
     {
-      path: '/login',
+      path: '/adminLogin',
       name: 'Login',
       component: Login,
       props: true,
-      redirect: '/',
+      // redirect: '/',
       children: []
 
     },

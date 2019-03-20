@@ -27,13 +27,13 @@
             </ul></router-link></li>
           <li><router-link to="AboutUs">关于我们</router-link></li>
           <li><router-link to="ContactUs">联系我们</router-link></li>
-          <li><router-link to="">切换 &nbsp;<i class="iconfont iconqiehuan"></i></router-link></li>
+          <li><a href="http://3d.dayu1.net">切换 &nbsp;<i class="iconfont iconqiehuan" style="font-size: 16px"></i></a></li>
         </ul>
       </section>
     </nav>
-    <div class="div3"><i class="iconfont iconzhiding"></i></div>
-    <div class="div7"><i class="iconfont iconweixingongzhonghao"></i></div>
-    <div class="div8"><i class="iconfont iconzaixianzixun"></i></div>
+    <a><div class="div3"><i class="iconfont iconzhiding"></i></div></a>
+    <a><div class="div7"><i class="iconfont iconweixingongzhonghao"></i></div></a>
+    <a href="http://line.dayu1.net/cust"><div class="div8"><i class="iconfont iconzaixianzixun"></i></div></a>
     <router-view></router-view>
     <footer>
       <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>

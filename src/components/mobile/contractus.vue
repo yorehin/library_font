@@ -13,7 +13,7 @@
             <div class="use-code"><img src="../../assets/mobile/contactUs/二维码.png" height="109" width="109"/></div>
             <div class="look-code">扫码关注</div>
           </div>
-          <div class="right-img"><img src="../../assets/img/home/地图.png" height="250" width="350"/></div>
+          <div class="right-img"><img src="../../assets/img/home/home_map.png" height="250" width="350"/></div>
         </div>
       </div>
     </div>

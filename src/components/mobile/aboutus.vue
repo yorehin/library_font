@@ -5,7 +5,7 @@
     <div id="father">
       <div style="border-left:2px solid #fbb03b;margin: 12px 0 13px 10px;padding-left: 7px">发展历程</div>
       <div class="son">
-        <img class="class-img" src="../../assets/img/aboutUs/发展历程.png" height="45" width="45"/>
+        <img class="class-img" src="../../assets/img/aboutUs/about_history.png" height="45" width="45"/>
         <div class="border1"></div>
         <div class="border" style="margin-left: 55px"></div>
         <div class="border" style="margin-left: 79px"></div>
@@ -21,7 +21,7 @@
 
       <div style="border-left:2px solid #fbb03b;margin: 12px 0 13px 10px;padding-left: 7px">企业文化</div>
       <div class="son">
-        <img id="son1-img" src="../../assets/img/aboutUs/企业文化.png" height="45" width="45"/>
+        <img id="son1-img" src="../../assets/img/aboutUs/about_culture.png" height="45" width="45"/>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
       </div>
       <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
