@@ -7,11 +7,9 @@
       <img src="../../../assets/img/product/product_lib.png" height="302" width="362"/>
       <img src="../../../assets/img/product/product_nav.png" height="302" width="362"/>
       <img src="../../../assets/img/product/product_wechat.png" height="302" width="362"/>
-
     </div>
   </div>
 </template>
-
 <script>
   export default {
     name: 'Product'
@@ -22,7 +20,6 @@
   .product-div{
     width: 1200px;
     margin: 63px auto 0;
-
   }
   .product-div img{
     padding: 17px;
