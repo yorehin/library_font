@@ -18,6 +18,7 @@ import service from '../components/mobile/service'
 import back from '../components/back/back'
 import history from '../components/back/history'
 import info from '../components/back/info'
+import products from '../components/back/products'
 
 Vue.use(Router)
 
@@ -116,9 +117,14 @@ export default new Router({
       path: '/back',
       name: 'back',
       component: back,
-      // props: true,
+      props: true,
       // redirect: '/',
       children: [
+        {
+          path: 'products',
+          name: 'products',
+          component: products
+        },
         {
           path: 'history',
           name: 'history',
