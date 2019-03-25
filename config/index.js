@@ -13,7 +13,9 @@ module.exports = {
     proxyTable: {
       '/public': {
         // 测试环境http://dayu1.net/
-        target: 'http://dayu1.net',  // 接口域名
+        // target: 'http://dayu1.net',  // 接口域名
+        target: 'http://192.168.0.105:8888',  // 接口域名
+        // target: 'http://3d.dayu1.net',  // 接口域名
         changeOrigin: true,  //是否跨域
         pathRewrite: {
           '^/public': '/public'   //需要rewrite重写的,

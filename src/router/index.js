@@ -11,9 +11,10 @@ import Login from '../components/back/Login'
 import Pc from '../components/pc/Pc'
 import phone from '../components/Phone'
 import home from '../components/mobile/home'
+import wechat from '../components/mobile/wechat'
 import aboutus from '../components/mobile/aboutus'
 import contractus from '../components/mobile/contractus'
-import product from '../components/mobile/product'
+import product from '../components/mobile/products'
 import service from '../components/mobile/service'
 import back from '../components/back/back'
 import history from '../components/back/history'
@@ -110,6 +111,11 @@ export default new Router({
           name: 'service',
           component: service
         },
+        {
+          path: 'wechat',
+          name: 'wechat',
+          component: wechat
+        }
       ]
 
     },

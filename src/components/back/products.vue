@@ -15,7 +15,23 @@
               </el-col>
             </el-form-item>
 
-            <el-form-item label="文章封面" prop="cover">
+            <el-form-item label="列表图片" prop="cover">
+              <input @change="ichange"
+                     accept=".jpg,.gif,.png,.jpeg"
+                     type="file"/>
+              <img :src="form.cover" width="20%"/>
+            </el-form-item>
+
+            <el-form-item label="首页图片" prop="cover">
+              <el-switch v-model="value3" inactive-text="显示">
+              </el-switch>
+              <input @change="ichange"
+                     accept=".jpg,.gif,.png,.jpeg"
+                     type="file"/>
+              <img :src="form.cover" width="20%"/>
+
+            </el-form-item>
+            <el-form-item label="详情图片" prop="cover">
               <input @change="ichange"
                      accept=".jpg,.gif,.png,.jpeg"
                      type="file"/>
@@ -59,16 +75,13 @@
           </tr>
           <tbody>
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td>{{form.name}}</td>
+            <td>{{form.cover}}</td>
+            <td>{{form.date1}}</td>
           </tr>
           </tbody>
         </table>
       </div>
-
-
     </div>
 </template>
 
@@ -78,10 +91,10 @@
     name: 'product',
     data() {
       return {
+        value3:true,
         size: 1,
         form: {
           name: '',
-
           cover: '',
           date1: '',
         },
@@ -99,7 +112,70 @@
           })
           .catch(_ => {});
       },
+      saveArticle(){
+        let banner = this.form
+        let file = this.image
+        let fd = new FormData()
+        if (file)
+        {
+          fd.append('image', file, file.name);
+          banner.cover = '1'
+        }
+        for (let par in banner)
+        {
+          fd.append(par, banner[par])
+        }
+        bolosev.saveArt(fd).then(res=>{
+          if (res.code==0){
+            this.showDialog = false
+            this.getList(this.cNavId)
+            this.$message.success("保存成功")
+          }
+          else
+          {
+            this.$message.error("保存失败")
+          }
+        })
+      },
       ichange(e) {
+        let ipt = e.target
+        let img = ipt.files[0]
+        if (!img)
+          return
+        if (img.size > 5242880) {
+          this.$message.error("上传图片不能超过5M");
+          return
+        }
+        ipt.value = ""
+        let reader = new FileReader()
+        let _this = this
+        reader.onload = (e) => {
+          let src = e.target.result
+          _this.image = img
+          _this.form.cover = src
+        }
+        reader.readAsDataURL(img)
+      },
+      ichang1(e) {
+        let ipt = e.target
+        let img = ipt.files[0]
+        if (!img)
+          return
+        if (img.size > 5242880) {
+          this.$message.error("上传图片不能超过5M");
+          return
+        }
+        ipt.value = ""
+        let reader = new FileReader()
+        let _this = this
+        reader.onload = (e) => {
+          let src = e.target.result
+          _this.image = img
+          _this.form.cover = src
+        }
+        reader.readAsDataURL(img)
+      },
+      ichang2(e) {
         let ipt = e.target
         let img = ipt.files[0]
         if (!img)

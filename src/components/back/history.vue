@@ -46,11 +46,11 @@
           <th>操作</th>
         </tr>
         <tbody>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
+        <tr v-for="">
+          <td>{{}}1</td>
+          <td>{{}}1</td>
+          <td>{{}}1</td>
+          <td>{{}}1</td>
         </tr>
         </tbody>
       </table>

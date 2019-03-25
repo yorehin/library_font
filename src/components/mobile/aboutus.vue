@@ -29,12 +29,13 @@
       </div>
 
     </div>
+
   </div>
 </template>
 
 <script>
   export default {
-    name: 'aboutus'
+    name: 'aboutus',
   }
 </script>
 

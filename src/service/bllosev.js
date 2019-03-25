@@ -110,7 +110,7 @@ export default {
     })
   },
   // 保存产品
-  saveProduct(){
+  saveServer(){
     return new Promise((resolve,reject)=>{
       axios.get(baseURL + 'saveProduct')
         .then((response) => {
@@ -182,9 +182,9 @@ export default {
     })
   },
   // 保存关于我们
-  saveComInfo(){
+saveComInfo(params){
     return new Promise((resolve,reject)=>{
-      axios.get(baseURL + 'saveComInfo')
+      axios.post(baseURL + 'saveComInfo',params)
         .then((response) => {
           resolve(response.data);
         })

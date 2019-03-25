@@ -1,23 +1,23 @@
 <template>
   <div>
     <nav>
-      <i id="icon1" class="iconfont iconshouye" style="color: white; font-size: 14px;"></i>
+      <a href="home"><i id="icon1" class="iconfont iconshouye" style="color: white; font-size: 14px;"></i></a>
       <i id="icon2" class="iconfont icongengduo2" style="color: white; font-size: 14px;"></i>
     </nav>
     <router-view></router-view>
     <footer>
       <div class="font-font">
         <div class="margin-margin" style="margin-left: 100px">
-          <a href="">
-            <div style="margin-top: 5px"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 23px;"></i></div>
+          <router-link to="wechat">
+            <div style="margin-top: 5px; color: white; font-size: 23px;"><i class="iconfont iconweixingongzhonghao"></i></div>
             <div style="margin-top: 3px">微信公众号</div>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="font-font">
         <div class="margin-margin" style="margin-left: 30.5px">
-          <a href="">
-            <div style="margin-top: 5px"><i class="iconfont iconliaotianjilu" style="color: white; font-size: 20px;"></i></div>
+          <a href="http://line.dayu1.net/cust" target="_blank">
+            <div style="margin-top: 5px; color: white; font-size: 20px;"><i class="iconfont iconliaotianjilu"></i></div>
             <div style="margin-top: 6px">在线咨询</div>
           </a>
         </div>

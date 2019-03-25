@@ -70,9 +70,9 @@
       </div>
       <!--<div class="div-line">fdsfd</div>-->
       <div class="div-right">
-        <!--<div class="div-riq">-->
+        <div class="div-riq">
           <div class="div-top">发展历程</div>
-        <!--</div>-->
+        </div>
           <div class="div-bottom">企业文化</div>
       </div>
     </div>
@@ -443,13 +443,15 @@ i{
   }
 .div-right{
   /*padding: 10px;*/
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   font-size: 25px;
   /*position:relative;*/
   text-align: center;
-  /*width: 400px;*/
+  width: 400px;
   height: 48px;
-  /*line-height: 48px;*/
+  line-height: 48px;
   color: black;
   background-color: #fbb03b;
   margin-left: 750px;
@@ -458,29 +460,39 @@ i{
 /*.div-right a:hover{*/
   /*color: white;*/
 /*}*/
-/*.div-riq{*/
-  /*display: inline;*/
-  /*!*margin: 0 auto;*!*/
-  /*!*width: 200px;1*!*/
-  /*!*display: inline-block;*!*/
-  /*line-height: 48px;*/
-  /*!*margin-top: auto;*!*/
-/*}*/
-.div-top{
+.div-riq{
   display: inline;
-  text-align: center;
   /*margin: 0 auto;*/
-  /*width: 200px;1*/
-  /*margin-top: 0px;*/
-  /*margin-top: 8px;*/
-  /*height: 32px;*/
-  /*line-height: 48px;*/
+  width: 50%;
   /*display: inline-block;*/
-  /*border-right: 1px solid black;*/
+  line-height: 48px;
+  /*margin-top: auto;*/
+}
+.div-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  /*display: inline;*/
+  font-size: 23px;
+  width: 100%;
+  margin: 0;
+  /*margin-top: 0px;*/
+  margin-top: 8px;
+  height: 32px;
+  line-height: 32px;
+  /*display: inline-block;*/
+  border-right: 1px solid black;
 }
 .div-bottom{
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*display: inline;*/
   text-align: center;
+  font-size: 23px;
+  margin: 0;
+  width: 50%;
   /*margin: 0 auto;*/
   /*width: 200px;*/
   /*margin-top: 0px;*/

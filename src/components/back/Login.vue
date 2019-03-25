@@ -44,7 +44,7 @@
           if (res.code == 0) {
             $('#success-div').fadeIn();
             setTimeout(() => {
-              this.$router.push('/Back/Nav')
+              this.$router.push('/back/products')
             }, 1000)
           } else {
             $('#fail-div').fadeIn();

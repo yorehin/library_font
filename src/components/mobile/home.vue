@@ -51,9 +51,9 @@
         </div>
         <!--<div class="div-line">fdsfd</div>-->
         <div class="div-right">
-          <!--<div class="div-riq">-->
-          <div class="div-top">发展历程</div>
-          <!--</div>-->
+          <div class="div-riq">
+            <div class="div-top">发展历程</div>
+          </div>
           <div class="div-bottom">企业文化</div>
         </div>
       </div>
@@ -170,7 +170,9 @@
     height: 591px;
   }
   .div-right{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-size: 12px;
     text-align: center;
     height: 24px;
@@ -179,13 +181,38 @@
     margin-left: 211px;
     margin-top: 115px;
   }
-  .div-top{
+  .div-riq{
+    margin: auto;
     display: inline;
+    /*margin: 0 auto;*/
+    width: 50%;
+    height: 10px;
+    /*display: inline-block;*/
+    line-height: 28px;
+    border-right: 1px black solid;
+    /*margin-top: auto;*/
+  }
+  .div-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
+    /*display: inline;*/
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    margin: -1px 0 0 0;
+    /*margin-top: 0px;*/
+    line-height: 100%;
+    /*display: inline-block;*/
   }
   .div-bottom{
-    display: inline;
-    text-align: center;
+    width: 50%;
+    height: 100%;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   .about-circular{
     display: inline-block;
@@ -298,7 +325,7 @@
   }
   .newProduct0{
     text-align: center;
-    margin: 12px auto 0px;
+    margin: 12px auto 0;
     padding-bottom: 6px;
   }
   .newProduct1{
