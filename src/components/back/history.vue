@@ -1,21 +1,20 @@
 <template>
   <div>
-
     <div class="nav-right">
       <div class="div-top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今日事今日毕</div>
       <el-button type="text" @click="dialogVisible = true">添加</el-button>
       <el-dialog title="添加" :visible.sync="dialogVisible" width="20%" :before-close="handleClose">
-        <el-form size="mini" ref="form" :model="form" label-width="80px">
+        <el-form size="mini" ref="form" :model="time" label-width="80px">
           <el-form-item label-width="150px" label="事件名称" style=" margin-left: -70px">
-            <el-input v-model="form.name" style="width: 83%;"></el-input>
+            <el-input v-model="time.name" style="width: 83%;"></el-input>
           </el-form-item>
           <el-form-item label="事件时间">
             <el-col :span="11">
-              <el-date-picker type="date" placeholder="选择日期" v-model="form.date1"></el-date-picker>
+              <el-date-picker type="date" placeholder="选择日期" v-model="time.date1"></el-date-picker>
             </el-col>
           </el-form-item>
           <el-form-item label="事件类型">
-            <el-select v-model="form.region">
+            <el-select v-model="time.region">
               <el-option label="大事件" value="big"></el-option>
               <el-option label="小事件" value="little"></el-option>
             </el-select>
@@ -23,7 +22,7 @@
         </el-form>
         <span slot="footer" class="dialog-footer">
             <el-button @click="dialogVisible = false">取 消</el-button>
-            <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+            <el-button type="primary" @click="submitForm('formwe')">确 定</el-button>
         </span>
       </el-dialog>
       <div class="kind">
@@ -46,11 +45,16 @@
           <th>操作</th>
         </tr>
         <tbody>
-        <tr v-for="">
-          <td>{{}}1</td>
-          <td>{{}}1</td>
-          <td>{{}}1</td>
-          <td>{{}}1</td>
+        <tr v-for="fo in times">
+          <td>{{fo.name}}</td>
+          <td>{{fo.region}}</td>
+          <td>{{fo.date1}}</td>
+          <td>
+            <div>
+              <button @click="edit()">编辑</button>
+              <button @click="delTime()">删除</button>
+            </div>
+          </td>
         </tr>
         </tbody>
       </table>
@@ -62,22 +66,64 @@
 </template>
 
 <script>
+  import $ from 'jquery'
+  import bolosev from '../../service/bllosev'
   export default {
 
     name: 'history',
     data() {
       return {
         size: 1,
-        form: {
+        time: {
           name: '',
           date1: '',
+          region:'',
         },
+        times:[],
         dialogVisible: false
       };
+    },
+    mounted(){
+      bolosev.time({}).then(res => {
+        // console.log(res.code)
+        if(res.code == 0){
+          this.times= res.data;
+        }else{
+          alert("操作失败")
+        }
+      })
     },
     methods: {
       onSubmit() {
         console.log('submit!');
+      },
+      edit(name){
+        bolosev.addTime({}).then(res => {
+          this.time.name = name;
+          this.time.region = region;
+          this.time.date1 = date1;
+          // console.log(res.code)
+          if(res.code == 0){
+            this.form= res.data;
+          }else{
+            alert("操作失败")
+          }
+
+
+        })
+      },
+
+      delTime(it){
+        bolosev.delTime({}).then(res => {
+          if (res.code==0)
+          {
+            this.getList(it.navid)
+            this.$message({
+              type: 'success',
+              message: '删除成功!'
+            })
+          }
+        })
       },
       handleClose(done) {
         this.$confirm('确认关闭？')
@@ -85,6 +131,35 @@
             done();
           })
           .catch(_ => {});
+      },
+      submitForm(formName){
+        let fd = new FormData()
+        for (let par in this.form)
+        {
+          if (par=='time')
+            continue
+          fd.append(par, this.form[par])
+        }
+        // if (file)
+        // {
+        //   fd.append('offNum', file, file.name);
+        // }
+        // else
+        //   fd.append('offNum', this.form.offNum);
+
+        // console.log(7598)
+        // let fd = new FormData()
+        // for (let par in this.form)
+        // {
+        //   fd.append(par, this.form[par])
+        // }
+        bolosev.addTime(fd).then(res => {
+          if(res.code==0){
+            alert("操作成功历程")
+          }else{
+            alert("操作失败")
+          }
+        })
       }
     }
   };

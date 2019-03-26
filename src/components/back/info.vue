@@ -1,13 +1,5 @@
 <template>
   <div>
-
-    <!--<span>{{phone}}sdfsd</span>-->
-    <!--<span>{{address}}</span>-->
-
-
-
-    <!--<el-button type="text" @click="dialogVisible = true">添加</el-button>-->
-    <!--<el-dialog title="添加" :visible.sync="dialogVisible" width="70%" :before-close="handleClose">-->
       <el-form size="mini" ref="formwe" :model="form" label-width="80px">
         <el-form-item prop="offNum">
           <img :src="form.offNum" width="20%"/>
@@ -17,15 +9,10 @@
         </el-form-item>
         <el-form-item label-width="150px" label="地址" style="margin-left: -50px" prop="name">
           <el-input v-model="form.address" style="width: 100px" ref="address">{{}}</el-input>
-          <!--v-on:keyup="logAddress"-->
         </el-form-item>
         <el-form-item label-width="150px" label="电话" style="margin-left: -50px" prop="age">
           <el-input v-model="form.phone" style="width: 100px" res="phone">{{}}</el-input>
-          <!-- v-on:keyup="logPhone"-->
         </el-form-item>
-
-
-
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button type="primary" @click="submitForm('formwe')">确 定</el-button>
@@ -46,7 +33,6 @@
           phone: 'info',
           address: '',
           offNum: '',
-          date1: '',
         },
         dialogVisible: false
       };
@@ -55,10 +41,7 @@
       bolosev.selectCom({}).then(res => {
         console.log(res.code)
         if(res.code == 0){
-          // res.data.offNum = ''
           this.form= res.data;
-          // this.form.phone =  res.data.phone;
-          // this.form.address =  res.data.address;
         }else{
           alert("操作失败")
         }
@@ -81,57 +64,23 @@
       resetForm(formName){
         this.$refs[formName].resetFields();
       },
-
-
-
-
-      // submitForm(formName) {
-      //   this.$refs[formName].validate((valid) => {
-      //     if (valid) {
-      //       let banner = this.curNav
-      //       let file = this.image
-      //       let file2 = this.image2
-      //       let fd = new FormData()
-      //       if (file)
-      //       {
-      //         fd.append('image', file, file.name);
-      //         banner.icon = '1'
-      //       }
-      //       if (file2)
-      //       {
-      //         fd.append('image2', file2, file2.name);
-      //         banner.iconhover = '1'
-      //       }
-      //       for (let par in banner)
-      //       {
-      //         fd.append(par, banner[par])
-      //       }
-      //       bolosev.saveComInfo(fd).then(res=>{
-      //         if (res.code==0){
-      //           this.$message.success('已保存');
-      //           this.getList()
-      //           this.showDialog = false;
-      //         }
-      //         else
-      //           this.$message.fail('保存失败')
-      //       })
-      //     } else {
-      //       console.log('error submit!!');
-      //       return false;
-      //     }
-      //   });
-      // },
-
-
-
-
-
-
-
-
-
       submitForm(formName){
-        bolosev.saveComInfo({id: 123, phone: this.form.phone, address: this.form.address, offNum: this.form.offNum}).then(res => {
+        let file = this.image
+        let fd = new FormData()
+        for (let par in this.form)
+        {
+          if (par=='offNum')
+            continue
+          fd.append(par, this.form[par])
+        }
+        if (file)
+        {
+          fd.append('offNum', file, file.name);
+        }
+        else
+          fd.append('offNum', this.form.offNum);
+
+        bolosev.saveComInfo(fd).then(res => {
           if(res.code==0){
             alert("操作成功")
           }else{
@@ -149,7 +98,7 @@
           this.$message.error("上传图片不能超过5M");
           return
         }
-        ipt.value = ""
+        // ipt.value = ""
         let reader = new FileReader()
         let _this = this
         reader.onload = (e) => {

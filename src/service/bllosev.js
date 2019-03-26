@@ -193,6 +193,43 @@ saveComInfo(params){
         });
     })
   },
+  // 发展历程
+  time(){
+    return new Promise((resolve,reject)=>{
+      axios.get(baseURL + 'time')
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  },
+  // 添加发展历程
+  addTime(params){
+    return new Promise((resolve,reject)=>{
+      axios.post(baseURL + 'addTime',params)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  },
+
+  // 删除发展历程
+  delTime(params){
+    return new Promise((resolve,reject)=>{
+      axios.post(baseURL + 'delTime',params)
+        .then((response) => {
+          resolve(response.data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    })
+  },
 
 
 
