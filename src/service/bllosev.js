@@ -14,7 +14,7 @@ axios.interceptors.response.use(
     if (error.response) {
       switch (error.response.status) {
         case 401:
-          router.push('/Login')
+          router.push('/adminLogin')
           break;
       }
     }

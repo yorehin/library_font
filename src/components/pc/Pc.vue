@@ -36,7 +36,7 @@
     <a href="http://line.dayu1.net/cust" target="_blank"><div class="div8"><i class="iconfont iconzaixianzixun"></i></div></a>
     <router-view></router-view>
     <footer>
-      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
+      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a" href="http://www.miitbeian.gov.cn">豫ICP备17037574号</a></div></div>
     </footer>
   </section>
 </template>

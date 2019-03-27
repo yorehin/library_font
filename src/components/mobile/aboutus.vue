@@ -24,7 +24,7 @@
         <img id="son1-img" src="../../assets/img/aboutUs/about_culture.png" height="45" width="45"/>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
       </div>
-      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
+      <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a" href="http://www.miitbeian.gov.cn">豫ICP备17037574号</a></div></div>
         <div class="back1">
       </div>
 

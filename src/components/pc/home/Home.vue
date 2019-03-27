@@ -120,6 +120,26 @@
         times: []
       }
     },
+    mounted() {
+      bolosev.productList({}).then(res => {
+        // console.log(res.code)
+        if (res.code == 0) {
+          // this.times= res.data;
+          // alert('请求成功')
+        } else {
+          alert("操作失败")
+        }
+      }),
+        bolosev.getServer({}).then(res => {
+          // console.log(res.code)
+          if (res.code == 0) {
+            // this.times= res.data;
+            // alert('请求成功')
+          } else {
+            alert("操作失败")
+          }
+        })
+    },
     created(){
 
     }

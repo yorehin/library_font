@@ -6,6 +6,7 @@
           <li><router-link to="products">最新产品</router-link></li>
           <li><router-link to="history">发展历程</router-link></li>
           <li><router-link to="info">公司信息</router-link></li>
+          <li><div @click="logout">退出</div></li>
         </ul>
       </div>
       <router-view></router-view>
@@ -13,8 +14,19 @@
 </template>
 
 <script>
+  import bolosev from '../../service/bllosev'
   export default {
-    name: 'back'
+    name: 'back',
+    methods:{
+      logout(){
+        bolosev.logout().then(res=>{
+          if (res.code==0)
+          {
+            this.$router.push('/adminLogin')
+          }
+        })
+      }
+    }
   }
 </script>
 

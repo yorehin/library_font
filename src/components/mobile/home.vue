@@ -80,7 +80,7 @@
 
     </div>
     <div>
-    <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a">豫ICP备17037574号</a></div></div>
+    <div id="down"><div class="down-div">&copy;2018  安阳大玉网络科技股份有限公司  版权所有  </div><div class="down-div2"><a id="down-a" href="http://www.miitbeian.gov.cn">豫ICP备17037574号</a></div></div>
     </div>
 
   </div>

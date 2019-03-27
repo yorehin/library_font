@@ -32,10 +32,97 @@
 
             </el-form-item>
             <el-form-item label="详情图片" prop="cover">
-              <input @change="ichange"
-                     accept=".jpg,.gif,.png,.jpeg"
-                     type="file"/>
-              <img :src="form.cover" width="20%"/>
+
+              <el-dropdown  @command="handleCommand">
+                <span class="el-dropdown-link">
+                  下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item command="a">1列</el-dropdown-item>
+                  <el-dropdown-item command="b">2列</el-dropdown-item>
+                  <el-dropdown-item command="c">3列</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
+              <template v-if="cnum==a" >
+                <ul>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                </ul>
+              </template>
+              <template v-else-if="cnum==b" >
+                <ul>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                </ul>
+              </template>
+              <template v-else-if="cnum==c" >
+                <ul>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                </ul>
+              </template>
+              <!--<div>-->
+                <!--<input @change="ichange"-->
+                       <!--accept=".jpg,.gif,.png,.jpeg"-->
+                       <!--type="file"/>-->
+                <!--<img :src="form.cover" width="20%"/>-->
+              <!--</div>-->
+              <!--<div v-if="" :visible.sync="dialogVisible">-->
+                <!--<input @change="ichange"-->
+                       <!--accept=".jpg,.gif,.png,.jpeg"-->
+                       <!--type="file"/>-->
+                <!--<img :src="form.cover" width="20%"/>-->
+              <!--</div>-->
+              <!--<div>-->
+                <!--<input @change="ichange"-->
+                       <!--accept=".jpg,.gif,.png,.jpeg"-->
+                       <!--type="file"/>-->
+                <!--<img :src="form.cover" width="20%"/>-->
+              <!--</div>-->
+
+
             </el-form-item>
 
             <el-form-item>
@@ -75,12 +162,20 @@
           </tr>
           <tbody>
           <tr>
-            <td>{{form.name}}</td>
-            <td>{{form.cover}}</td>
-            <td>{{form.date1}}</td>
+            <td>{{form.name}}1</td>
+            <td>{{form.cover}}1</td>
+            <td>{{form.date1}}1</td>
           </tr>
           </tbody>
         </table>
+      </div>
+
+      <div class="block" style="text-align: center">
+        <span class="demonstration"></span>
+        <el-pagination
+          layout="prev, pager, next"
+          :total="1">
+        </el-pagination>
       </div>
     </div>
 </template>
@@ -93,15 +188,24 @@
       return {
         value3:true,
         size: 1,
+        two:false,
+        three:false,
         form: {
           name: '',
           cover: '',
           date1: '',
         },
+        cnum: 1,
         dialogVisible: false
       };
     },
     methods: {
+      handleCommand(command) {
+        this.cnum = command
+        this.$message('click on item ' + this.cnum);
+        console.log(command+'qwer')
+        // this.$message('click on item ' + command);//这个是提示
+      },
       onSubmit() {
         console.log('submit!');
       },
