@@ -58,11 +58,12 @@
             path:'/phone/service',
             isOpen: false
           },
-          {title:'最新产品',children:[
-              {title:'手机App',path:"/phone/product?code=app"},
-              {title:'手机App',path:"/phone/product?code=app"},
-              {title:'手机App',path:"/phone/product?code=app"}
-            ],
+          {title:'最新产品',
+            // children:[
+            //   {title:'手机App',path:"/phone/product?code=app"},
+            //   {title:'手机App',path:"/phone/product?code=app"},
+            //   {title:'手机App',path:"/phone/product?code=app"}
+            // ],
             path:'/phone/product',
             isOpen: false
           },

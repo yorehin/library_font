@@ -37,7 +37,6 @@
     background-color: #0d0d2f;
   }
   .div-img{
-
     margin: 12px auto 0;
     text-align: center;
   }
@@ -47,7 +46,6 @@
     padding: 2px;
   }
   .img3{
-    /*text-align: left;*/
     margin-right: 181px;
   }
 </style>
