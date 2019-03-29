@@ -31,8 +31,9 @@
         </ul>
       </section>
     </nav>
-    <a><div class="div3"><i class="iconfont iconzhiding"></i></div></a>
-    <a><div class="div7"><i class="iconfont iconweixingongzhonghao"></i></div></a>
+    <a class="a-right" href="#top"><div class="div3"><i class="iconfont iconzhiding"></i></div></a>
+    <a v-if="right_QR"><div class="div9"><img src="../../assets/img/home/home_rightQR.png" height="116" width="121"/></div></a>
+    <a><div class="div7" @click="right_QR = !right_QR"><i class="iconfont iconweixingongzhonghao"></i></div></a>
     <a href="http://line.dayu1.net/cust" target="_blank"><div class="div8"><i class="iconfont iconzaixianzixun"></i></div></a>
     <router-view></router-view>
     <footer>
@@ -43,11 +44,19 @@
 
 <script>
   export default {
-    name: 'Pc'
+    name: 'Pc',
+    data(){
+      return{
+        right_QR:false
+      }
+    }
   }
 </script>
 
 <style scoped>
+  .a-right:hover{
+    border: 0px;
+  }
   nav{
     position:fixed;
     height: 64px;
@@ -166,6 +175,19 @@
     border-radius: 50%;
     color: #545454;
     background-color: #bcbcbd;
+  }
+  .div9{
+    padding: 0;
+    margin-top: 50vh;
+    right: 50px;
+    position:fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #545454;
+    /*background-color: #bcbcbd;*/
   }
   .div7{
     margin-top: 52vh;

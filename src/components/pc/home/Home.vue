@@ -1,5 +1,67 @@
 <template>
 <div>
+
+
+
+
+  <!--<div class="nav">-->
+    <!--<ul>-->
+      <!--<li>ABOUT</li>-->
+      <!--<li>VIEW</li>-->
+      <!--<li>CASE</li>-->
+      <!--<li>SERVICE</li>-->
+      <!--<li>HOME</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+  <div id="pageContain">
+
+    <div class="page page1 current">
+      <div class="contain">
+
+      </div>
+    </div>
+
+    <div class="page page2">
+      <div class="contain">
+
+      </div>
+    </div>
+
+    <div class="page page3">
+      <div class="contain">
+
+      </div>
+    </div>
+
+    <div class="page page4">
+      <div class="contain">
+
+      </div>
+    </div>
+  </div>
+  <ul id="navBar">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div id="prev">&lt;</div>
+  <div id="next">&gt;</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <img src="../../../assets/img/home/home_tranform1.png" height="100%" width="100%"/>
   <div id="product">
     <div id="productService"><h1>产品服务</h1></div>
@@ -18,9 +80,6 @@
       </ul>
     </div>
   </div>
-
-
-  <!--<img src="../../assets/img/home/home_back.png" height="100%" width="100%"/>-->
   <div id="new">
     <div class="newProduct0"><h1>最新产品</h1></div>
     <div class="newProduct1">
@@ -45,8 +104,6 @@
       <div id="div-text"><div>&nbsp;查看更多<i class="iconfont icongengduo" style="color: white; font-size: 23px; margin-left: 2px"></i></div></div>
     </div>
   </div>
-
-
   <div id="about">
     <div class="newProduct0" style="color: black"><h1>关于我们</h1></div>
     <div class="newProduct1" style="color: black">
@@ -68,7 +125,6 @@
       <div class="about-div-3">
         <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
       </div>
-      <!--<div class="div-line">fdsfd</div>-->
       <div class="div-right">
         <div class="div-riq">
           <div class="div-top">发展历程</div>
@@ -77,9 +133,6 @@
       </div>
     </div>
   </div>
-
-
-
   <div id="contact">
     <div class="newProduct0"><h1>联系我们</h1></div>
       <div class="newProduct1">
@@ -89,52 +142,62 @@
       </div>
     <div id="contact-top">
       <div id="contact-left">
-        <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址:河南省安阳市汤阴县信合路南段路东47巷</div>
-        <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话:155-3723-2100</div>
+        <!--<div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址:<input v-model="product_list.address"/></div>-->
+        <!--<div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话:<input v-model="product_list.phone"/></div>-->
         <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
         <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
         <div class="look-code">扫码关注</div>
-        <div class="use-code"><img src="../../../assets/img/home/home_contactQR.png" height="220" width="220"/></div>
+        <div class="use-code">
+          <!--<input @change="ichange"-->
+                 <!--accept=".jpg,.gif,.png,.jpeg"-->
+                 <!--type="file"/>-->
+          <img src="../../../assets/img/home/home_contactQR.png" height="220" width="220"/>
+        </div>
       </div>
       <div class="right-img"><img src="../../../assets/img/home/home_map.png" height="498" width="700"/></div>
-      <!--<ul>-->
-      <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-Excel.png" height="300" width="360"/><div class="new-text">Excel小帮手-定制软件</div></div></div></li>-->
-      <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-汤阴县图书馆.png" height="300" width="360"/><div class="new-text">汤阴县图书馆-WEB网站</div></div></div></li>-->
-      <!--<li><div class="li-div1"><div class="compute"><img src="../../assets/img/home/首页-最新产品-斑点狗.png" height="300" width="360"/><div class="new-text">斑点狗约课-小程序</div></div></div></li>-->
-      <!--</ul>-->
-      <!--<div id="div-img"><img src="../../assets/img/home/首页最新产品指示球.png" height="48" width="48"/></div>-->
-      <!--<div id="div-text"><div>查看更多<i class="iconfont icongengduo"></i></div></div>-->
     </div>
   </div>
 </div>
 </template>
-
 <script>
   import bolosev from '../../../service/bllosev.js'
   import {baseURL} from '../common/globaldata'
-
   export default {
+
+
+
     name: 'home',
     data() {
       return {
-        times: []
+        times: [],
+        product_list: {
+          id,
+          phone,
+          offNum,
+          address
+        },
       }
     },
     mounted() {
+
       bolosev.productList({}).then(res => {
-        // console.log(res.code)
         if (res.code == 0) {
-          // this.times= res.data;
-          // alert('请求成功')
         } else {
           alert("操作失败")
         }
       }),
-        bolosev.getServer({}).then(res => {
-          // console.log(res.code)
+        bolosev.serviceList({}).then(res => {
           if (res.code == 0) {
-            // this.times= res.data;
-            // alert('请求成功')
+          } else {
+            alert("操作失败")
+          }
+        }),
+        bolosev.contactUs({}).then(res => {
+          if (res.code == 0) {
+            console.log('产品列表'+res.data+'杨丽'+this.product_list)
+            this.product_list = res.data
+            console.log(this.product_list)
+
           } else {
             alert("操作失败")
           }
@@ -142,10 +205,49 @@
     },
     created(){
 
+      if (this.isPhone())
+      {
+        this.$router.push('/phone/home')
+        return;
+      }
+
+    },
+    methods:{
+      isPhone(){
+        let ua = navigator.userAgent;
+
+        let ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+
+          isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+
+          isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+
+          isMobile = isIphone || isAndroid;
+        console.log('------->>isPhone',ua,isIphone,isAndroid,isMobile)
+        return isMobile;
+      },
+      ichange(e) {
+        let ipt = e.target
+        let img = ipt.files[0]
+        if (!img)
+          return
+        if (img.size > 5242880) {
+          this.$message.error("上传图片不能超过5M");
+          return
+        }
+        // ipt.value = ""
+        let reader = new FileReader()
+        let _this = this
+        reader.onload = (e) => {
+          let src = e.target.result
+          _this.image = img
+          _this.form.offNum = src
+        }
+        reader.readAsDataURL(img)
+      },
     }
   }
 </script>
-
 <style scoped>
   .line-line{
     border-left: 3px solid #10103b;
@@ -567,5 +669,158 @@ i{
     margin-top: -500px;
     margin-left: 500px;
   }
+
+
+
+
+
+
+  html {
+    -ms-touch-action: none;  /* 阻止windows Phone 的默认触摸事件 */
+  }
+  body,
+  div,
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  body {
+    width: 100%;
+    *cursor: default;
+    overflow: hidden;
+    font: 16px/1.5 "Microsoft YaHei",Helvetica,STHeiti STXihei,Microsoft JhengHei,Arial;
+  }
+  #pageContain {
+    overflow: hidden;
+  }
+  .page {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .contain {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    z-index: 0;
+  }
+  .current .contain,.slide .contain {
+    display: block;
+  }
+  .current {
+    display: block;
+    z-index: 1;
+  }
+  .slide {
+    display: block;
+    z-index: 2;
+  }
+  .swipe {
+    display: block;
+    z-index: 3;
+    transition-duration: 0ms !important;
+    -webkit-transition-duration: 0ms !important;
+  }
+  .page1 {
+    background: #37c1e3;
+    /*background-image: url("轮播图1.png");*/
+  }
+  .page2 {
+    background: #009922;
+    /*background-image: url("轮播图2.png");*/
+  }
+  .page3 {
+    background: #992211;
+    /*background-image: url("轮播图2.png");*/
+  }
+  .page4 {
+    background: #ff00ff;
+    /*background-image: url("轮播图2.png");*/
+  }
+  .page5 {
+    background: #00ff00;
+  }
+  .page6 {
+    background: #22ffff;
+  }
+  #navBar {
+    z-index: 3;
+    position: absolute;
+    font-size: 0px;
+    line-height: 0;
+    bottom: 10px;
+    text-align: center;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+  }
+  #navBar .active {
+    background: #ccc;
+  }
+  #navBar li {
+    background: transparent;
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-size: 0px;
+    margin: 0 4px;
+    *float: left;
+    *zoom:1;
+    cursor: pointer;
+    transition: all .7s ease;
+    border-radius: 50%;
+    line-height: 10px;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+  }
+  #prev,#next {
+    z-index: 4;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    cursor:pointer;
+    margin-top: -20px;
+  }
+  #prev {
+    left: 0
+  }
+  #next {
+    right: 0
+  }
+  .nav {
+    z-index: 5;
+    position: fixed;
+    _position:absolute;
+    background: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+  }
+  .nav li {
+    display: inline;
+    float: right;
+    margin: 0 12px;
+  }
+
+
+
+
+
+
 
 </style>

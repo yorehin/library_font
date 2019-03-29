@@ -8,10 +8,10 @@
                  type="file"/>
         </el-form-item>
         <el-form-item label-width="150px" label="地址" style="margin-left: -50px" prop="name">
-          <el-input v-model="form.address" style="width: 100px" ref="address">{{}}</el-input>
+          <el-input v-model="form.address" style="width: 100px" ref="address"></el-input>
         </el-form-item>
         <el-form-item label-width="150px" label="电话" style="margin-left: -50px" prop="age">
-          <el-input v-model="form.phone" style="width: 100px" res="phone">{{}}</el-input>
+          <el-input v-model="form.phone" style="width: 100px" res="phone"></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">

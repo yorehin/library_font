@@ -86,7 +86,7 @@ export default {
   // 首页联系我们
   contactUs(params){
     return new Promise((resolve,reject)=>{
-      axios.post(baseURL + 'getComInfo',params)
+      axios.get(baseURL + 'getComInfo',params)
         .then((response) => {
           resolve(response.data);
           resolve(response.data);

@@ -38,12 +38,12 @@
                   下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item command="a">1列</el-dropdown-item>
-                  <el-dropdown-item command="b">2列</el-dropdown-item>
-                  <el-dropdown-item command="c">3列</el-dropdown-item>
+                  <el-dropdown-item command="1">1列</el-dropdown-item>
+                  <el-dropdown-item command="2">2列</el-dropdown-item>
+                  <el-dropdown-item command="3">3列</el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
-              <template v-if="cnum==a" >
+              <template v-if="cnum==1" >
                 <ul>
                   <li>
                     <div>
@@ -55,36 +55,8 @@
                   </li>
                 </ul>
               </template>
-              <template v-else-if="cnum==b" >
+              <template v-else-if="cnum==2" >
                 <ul>
-                  <li>
-                    <div>
-                      <input @change="ichange"
-                             accept=".jpg,.gif,.png,.jpeg"
-                             type="file"/>
-                      <img :src="form.cover" width="20%"/>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <input @change="ichange"
-                             accept=".jpg,.gif,.png,.jpeg"
-                             type="file"/>
-                      <img :src="form.cover" width="20%"/>
-                    </div>
-                  </li>
-                </ul>
-              </template>
-              <template v-else-if="cnum==c" >
-                <ul>
-                  <li>
-                    <div>
-                      <input @change="ichange"
-                             accept=".jpg,.gif,.png,.jpeg"
-                             type="file"/>
-                      <img :src="form.cover" width="20%"/>
-                    </div>
-                  </li>
                   <li>
                     <div>
                       <input @change="ichange"
@@ -103,28 +75,35 @@
                   </li>
                 </ul>
               </template>
-              <!--<div>-->
-                <!--<input @change="ichange"-->
-                       <!--accept=".jpg,.gif,.png,.jpeg"-->
-                       <!--type="file"/>-->
-                <!--<img :src="form.cover" width="20%"/>-->
-              <!--</div>-->
-              <!--<div v-if="" :visible.sync="dialogVisible">-->
-                <!--<input @change="ichange"-->
-                       <!--accept=".jpg,.gif,.png,.jpeg"-->
-                       <!--type="file"/>-->
-                <!--<img :src="form.cover" width="20%"/>-->
-              <!--</div>-->
-              <!--<div>-->
-                <!--<input @change="ichange"-->
-                       <!--accept=".jpg,.gif,.png,.jpeg"-->
-                       <!--type="file"/>-->
-                <!--<img :src="form.cover" width="20%"/>-->
-              <!--</div>-->
-
-
+              <template v-else-if="cnum==3" >
+                <ul>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <input @change="ichange"
+                             accept=".jpg,.gif,.png,.jpeg"
+                             type="file"/>
+                      <img :src="form.cover" width="20%"/>
+                    </div>
+                  </li>
+                </ul>
+              </template>
             </el-form-item>
-
             <el-form-item>
               <el-button type="primary" @click="onSubmit">立即创建</el-button>
               <el-button>取消</el-button>
@@ -203,7 +182,6 @@
       handleCommand(command) {
         this.cnum = command
         this.$message('click on item ' + this.cnum);
-        console.log(command+'qwer')
         // this.$message('click on item ' + command);//这个是提示
       },
       onSubmit() {
