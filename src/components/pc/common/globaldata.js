@@ -15,7 +15,7 @@ let baseURL
 if (process.env.NODE_ENV === 'development') {
   baseURL = '/public/'
 } else if (process.env.NODE_ENV === 'production') {
-  baseURL = '/api/'
+  baseURL = '/public/'
 }
 
 export {Domain, baseURL}
