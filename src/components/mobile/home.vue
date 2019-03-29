@@ -1,8 +1,16 @@
 <template>
   <!--<div id="hed"></div>-->
   <div>
+    <!--轮播图-->
+    <!--<template>-->
+      <!--<el-carousel indicator-position="outside">-->
+        <!--<el-carousel-item v-for="item in 4" :key="item">-->
+          <!--<h3>{{ item }}</h3>-->
+        <!--</el-carousel-item>-->
+      <!--</el-carousel>-->
+    <!--</template>-->
     <div id="li1"></div>
-    <img src="../../assets/mobile/home/轮播图1.png" height="204" width="100%"/>
+    <img src="../../assets/mobile/home/PHomeTurn1.png" height="204" width="100%"/>
     <div>
       <div class="newProduct0" style="color: #10103b;">产品服务</div>
       <div class="newProduct1">
@@ -24,7 +32,7 @@
           New Product
         </div>
       </div>
-      <div style="text-align: center; margin-top: -10px;"><img src="../../assets/mobile/home/首页-最新产品-Excel.png" height="300" width="360"/></div>
+      <div style="text-align: center; margin-top: -10px;"><img src="../../assets/mobile/home/PHomeExcel.png" height="300" width="360"/></div>
       <div class="getName">名称获取</div>
       <div class="comprehend" style="margin-top: -3px; color: white">了解详情</div>
     </div>
@@ -308,7 +316,7 @@
     margin-top: -50px;
   }
   .testBack{
-    background:url('../../assets/mobile/home/最新产品背景.png')
+    background:url('../../assets/mobile/home/homeProductBck.png')
   }
   .iconfont {
     -webkit-app-region: no-drag;

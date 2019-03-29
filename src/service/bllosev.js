@@ -99,7 +99,7 @@ export default {
   // 产品
   selectProduct(params){
     return new Promise((resolve,reject)=>{
-      axios.post(baseURL + 'allProducts',params)
+      axios.get(baseURL + 'allProducts',params)
         .then((response) => {
           resolve(response.data);
           resolve(response.data);

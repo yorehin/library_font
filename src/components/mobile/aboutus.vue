@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="li1"></div>
-    <img src="../../assets/mobile/home/轮播图1.png" height="100%" width="100%"/>
+    <img src="../../assets/mobile/home/PHomeTurn1.png" height="100%" width="100%"/>
     <div id="father">
       <div style="border-left:2px solid #fbb03b;margin: 12px 0 13px 10px;padding-left: 7px">发展历程</div>
       <div class="son">

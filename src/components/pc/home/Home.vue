@@ -733,19 +733,19 @@ i{
   }
   .page1 {
     background: #37c1e3;
-    /*background-image: url("轮播图1.png");*/
+    /*background-image: url("PHomeTurn1.png");*/
   }
   .page2 {
     background: #009922;
-    /*background-image: url("轮播图2.png");*/
+    /*background-image: url("PHomeTurn2.png");*/
   }
   .page3 {
     background: #992211;
-    /*background-image: url("轮播图2.png");*/
+    /*background-image: url("PHomeTurn2.png");*/
   }
   .page4 {
     background: #ff00ff;
-    /*background-image: url("轮播图2.png");*/
+    /*background-image: url("PHomeTurn2.png");*/
   }
   .page5 {
     background: #00ff00;

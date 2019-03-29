@@ -160,6 +160,8 @@
 </template>
 
 <script>
+  import $ from 'jquery'
+  import bolosev from '../../service/bllosev'
   export default {
 
     name: 'product',
@@ -177,6 +179,16 @@
         cnum: 1,
         dialogVisible: false
       };
+    },
+    mounted(){
+      bolosev.selectProduct({}).then(res => {
+        console.log('杨丽宾')
+        if(res.code == 0){
+          this.times= res.data;
+        }else{
+          this.$message('操作失败');
+        }
+      })
     },
     methods: {
       handleCommand(command) {

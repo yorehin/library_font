@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="li1"></div>
-    <img src="../../assets/mobile/home/轮播图1.png" height="100%" width="100%"/>
+    <img src="../../assets/mobile/home/PHomeTurn1.png" height="100%" width="100%"/>
     <div id="div-id">
       <div id="contact">
         <div id="contact-top">
@@ -10,7 +10,7 @@
             <div class="font-font"><i class="iconfont iconshouji" style="color: black; font-size: 16px;"></i>&nbsp;&nbsp;电话:155-3723-2100</div>
             <div class="font-font"><i class="iconfont iconyouxiang" style="color: black; font-size: 16px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
             <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: black; font-size: 16px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
-            <div class="use-code"><img src="../../assets/mobile/contactUs/二维码.png" height="109" width="109"/></div>
+            <div class="use-code"><img src="../../assets/mobile/contactUs/QR.png" height="109" width="109"/></div>
             <div class="look-code">扫码关注</div>
           </div>
           <div class="right-img"><img src="../../assets/img/home/home_map.png" height="250" width="350"/></div>

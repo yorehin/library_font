@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="li1"></div>
-    <img src="../../assets/mobile/home/轮播图1.png" height="204" width="100%"/>
+    <img src="../../assets/mobile/home/PHomeTurn1.png" height="204" width="100%"/>
     <div class="main">
       <div class="box0" id="service-app">
         <h1>手机APP设计开发</h1>
