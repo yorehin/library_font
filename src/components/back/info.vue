@@ -43,7 +43,7 @@
         if(res.code == 0){
           this.form= res.data;
         }else{
-          alert("操作失败")
+          this.$message('操作失败');
         }
       })
     },
@@ -80,9 +80,9 @@
 
         bolosev.saveComInfo(fd).then(res => {
           if(res.code==0){
-            alert("操作成功")
+            this.$message('操作成功');
           }else{
-            alert("操作失败")
+            this.$message('操作失败');
           }
         })
       },

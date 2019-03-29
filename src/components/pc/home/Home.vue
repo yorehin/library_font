@@ -183,13 +183,13 @@
       bolosev.productList({}).then(res => {
         if (res.code == 0) {
         } else {
-          alert("操作失败")
+          this.$message('操作失败');
         }
       }),
         bolosev.serviceList({}).then(res => {
           if (res.code == 0) {
           } else {
-            alert("操作失败")
+            this.$message('操作失败');
           }
         }),
         bolosev.contactUs({}).then(res => {
@@ -199,7 +199,7 @@
             console.log(this.product_list)
 
           } else {
-            alert("操作失败")
+            this.$message('操作失败');
           }
         })
     },

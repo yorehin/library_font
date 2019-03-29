@@ -20,12 +20,10 @@
     },
     created(){
       bolosev.productList({}).then(res => {
-        console.log(res.code)
         if(res.code == 0){
           this.imgs= res.data;
-
         }else{
-          alert("操作失败")
+          this.$message('操作失败');
         }
       })
     }
