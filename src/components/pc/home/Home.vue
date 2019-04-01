@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="homePage" >
 
 
 
@@ -13,56 +13,57 @@
       <!--<li>HOME</li>-->
     <!--</ul>-->
   <!--</div>-->
-  <div id="pageContain">
+  <!--<div id="pageContain">-->
 
-    <div class="page page1 current">
-      <div class="contain">
+    <!--<div class="page page1 current">-->
+      <!--<div class="contain">-->
 
-      </div>
-    </div>
+      <!--</div>-->
+    <!--</div>-->
 
-    <div class="page page2">
-      <div class="contain">
+    <!--<div class="page page2">-->
+      <!--<div class="contain">-->
 
-      </div>
-    </div>
+      <!--</div>-->
+    <!--</div>-->
 
-    <div class="page page3">
-      <div class="contain">
+    <!--<div class="page page3">-->
+      <!--<div class="contain">-->
 
-      </div>
-    </div>
+      <!--</div>-->
+    <!--</div>-->
 
-    <div class="page page4">
-      <div class="contain">
+    <!--<div class="page page4">-->
+      <!--<div class="contain">-->
 
-      </div>
-    </div>
-  </div>
-  <ul id="navBar">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <div id="prev">&lt;</div>
-  <div id="next">&gt;</div>
-
-
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<ul id="navBar">-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+    <!--<li></li>-->
+  <!--</ul>-->
+  <!--<div id="prev">&lt;</div>-->
+  <!--<div id="next">&gt;</div>-->
 
 
+  <template>
+    <el-carousel height="100vh" indicator-position="outside">
+      <el-carousel-item v-for="(item ,index) in imgList" :key="item.id">
+        <el-row>
+          <el-col :span="24">
+            <!--<img ref="imgHeight" :src="item.idView" class="banner_img"/>-->
+            <div class="swiperDiv" :style="{backgroundImage:`url(${item.idView})`}" >
 
-
-
-
-
-
-
-
-
-
-
-  <img src="../../../assets/img/home/home_tranform1.png" height="100%" width="100%"/>
+            </div>
+          </el-col>
+        </el-row>
+      </el-carousel-item>
+    </el-carousel>
+  </template>
+  <!--<img src="../../../assets/img/home/home_tranform1.png" height="100%" width="100%"/>-->
   <div id="product">
     <div id="productService"><h1>产品服务</h1></div>
       <div id="productE">
@@ -142,10 +143,12 @@
       </div>
     <div id="contact-top">
       <div id="contact-left">
-        <!--<div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址:<input v-model="product_list.address"/></div>-->
-        <!--<div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话:<input v-model="product_list.phone"/></div>-->
-        <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
-        <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
+        <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址：<input v-model="product_list.address"/></div>
+        <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：<input v-model="product_list.phone"/></div>
+        <!--<div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：<input v-model="product_list.email"/></div>-->
+        <!--<div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：<input v-model="product_list.public_number"/></div>-->
+        <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;邮箱：123278392@qq.com</div>
+        <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;微信公众号：安阳大玉网络科技有限公司</div>
         <div class="look-code">扫码关注</div>
         <div class="use-code">
           <!--<input @change="ichange"-->
@@ -170,15 +173,26 @@
     data() {
       return {
         times: [],
+        imgList: [
+          {id: 0, idView: require('../../../assets/img/home/home_tranform1.png')},
+          {id: 1, name: '详情', idView: require('../../../assets/img/home/home_tranform2.png')},
+        ],
         product_list: {
-          id,
-          phone,
-          offNum,
-          address
+          id:'',
+          email:'',
+          public_number:'',
+          phone:'',
+          offNum:'',
+          address:''
         },
       }
     },
     mounted() {
+      // that.imgHeight = '620px'
+      // window.onresize = function temp() {
+      //   // 通过点语法获取img的height属性值
+      //   that.imgHeight = `${that.$refs.imgHeight['0'].height}px`
+      // }
 
       bolosev.productList({}).then(res => {
         if (res.code == 0) {
@@ -194,10 +208,7 @@
         }),
         bolosev.contactUs({}).then(res => {
           if (res.code == 0) {
-            console.log('产品列表'+res.data+'杨丽'+this.product_list)
             this.product_list = res.data
-            console.log(this.product_list)
-
           } else {
             this.$message('操作失败');
           }
@@ -260,7 +271,7 @@
   /*display: inline-block;*/
   /*font-size: 30px;*/
   /*height: 100vh;*/
-  /*width: 100vw;*/
+  /*width: 99vw;*/
   /*!*max-width: 100%;*!*/
   /*max-height: 100vh;*/
   /*background-color: white;*/
@@ -269,7 +280,7 @@
   flex-direction: column;
   height: 100vh;
   max-height: 100vh;
-  width: 100vw;
+  width: 99vw;
   font-size: 30px;
 }
 #productService{
@@ -365,7 +376,7 @@ i{
   #new{
     display: inline-block;
     font-size: 30px;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     /*max-width: 100%;*/
     max-height: 100vh;
@@ -452,7 +463,7 @@ i{
     display: inline-block;
     font-size: 30px;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
     min-height: 744px;
     /*max-width: 100%;*/
     max-height: 100vh;
@@ -633,7 +644,7 @@ i{
 #contact{
   display: inline-block;
   font-size: 30px;
-  width: 100vw;
+  width: 99vw;
   height: 100%;
   /*max-width: 100%;*/
   /*max-height: 100vh;*/
@@ -645,6 +656,13 @@ i{
     height: 500px;
     /*margin-left: 370px;*/
     margin-top: 83px;
+  }
+  .font-font>input{
+    background-color: #10103b;
+    /*background: white;*/
+    border: 0;
+    color: white;
+    font-size: 18px;
   }
   .font-font{
     margin-left: -70px;
@@ -821,6 +839,16 @@ i{
 
 
 
+.swiperDiv{
+  height: 98vh;
+  /*width: 99vw;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1920px 924px;
+}
 
+  .homePage>div{
 
+    /*background: white !important;*/
+  }
 </style>

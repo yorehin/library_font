@@ -63,6 +63,7 @@
     /*width: 1440px;*/
     width: 100%;
     background-color:rgba(0,0,0,0.2);
+    z-index: 100;
     /*margin: 0 auto;*/
   }
   /*.section{*/

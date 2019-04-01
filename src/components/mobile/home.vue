@@ -18,11 +18,38 @@
         Product Service
         </div>
       </div>
-      <div class="font-1">
-        <div class="font-2">手机APP设计开发</div>
-        <div class="font-3"><i class="iconfont iconappkaifa"></i></div>
-        <div class="comprehend">了解详情</div>
-      </div>
+
+      <template>
+        <el-carousel indicator-position="outside" style="height: 150px;">
+          <el-carousel-item  class="div-flex" v-for="item in 5" :key="item">
+            <div class="font-1">
+              <div class="font-2">{{names[item-1]}}</div>
+              <div class="font-3"><i class="iconfont iconappkaifa"></i></div>
+              <div class="comprehend">了解详情</div>
+            </div>
+            <div class="font-4">
+              <div class="font-2">{{names[item]}}</div>
+              <div class="font-3"><i class="iconfont iconappkaifa"></i></div>
+              <div class="comprehend">了解详情</div>
+            </div>
+            <!--<div class="font-1">-->
+              <!--<div class="font-2">手机APP设计开发</div>-->
+              <!--<div class="font-3"><i class="iconfont iconappkaifa"></i></div>-->
+              <!--<div class="comprehend">了解详情</div>-->
+            <!--</div>-->
+            <!--<div class="font-4">-->
+              <!--<div class="font-2">手发</div>-->
+              <!--<div class="font-3"><i class="iconfont iconappkaifa"></i></div>-->
+              <!--<div class="comprehend">了解详情</div>-->
+            <!--</div>-->
+            <!--<div class="font-1">-->
+              <!--<div class="font-2">手机APP设计开发</div>-->
+              <!--<div class="font-3"><i class="iconfont iconappkaifa"></i></div>-->
+              <!--<div class="comprehend">了解详情</div>-->
+            <!--</div>-->
+          </el-carousel-item>
+        </el-carousel>
+      </template>
     </div>
     <div class="testBack" >
       <!--<img src="" height="100%" width="100%"/>-->
@@ -97,7 +124,13 @@
 
 <script>
   export default {
-    name: 'home'
+    name: 'home',
+    data () {
+      return{
+        names:['手机APP设计开发','小程序开发设计','WEB网站设计开发','PC客户端设计开发','定制软件设计与开发'],
+        // names:['手机APP设计开发','小程序开发设计','WEB网站设计开发','PC客户端设计开发','定制软件设计与开发'],
+      }
+    }
   }
 </script>
 
@@ -316,7 +349,8 @@
     margin-top: -50px;
   }
   .testBack{
-    background:url('../../assets/mobile/home/homeProductBck.png')
+    background-color: #43a047;
+    /*background:url('../../assets/mobile/home/homeProductBck.png')*/
   }
   .iconfont {
     -webkit-app-region: no-drag;
@@ -349,13 +383,22 @@
     font-size: 1px;
     /*width: 500px;1*/
   }
+  /*.div-flex{*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*height: 100%;*/
+  /*}*/
   .font-1{
     border: 1px #10103b dashed;
     width: 174px;
     height: 131px;
     margin: 10px;
-
-
+  }
+  .font-4{
+    border: 1px #10103b dashed;
+    width: 174px;
+    height: 131px;
+    margin: -143px 10px 10px 192px;
   }
   .font-2 {
     margin-top: 15px;
