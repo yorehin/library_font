@@ -20,33 +20,18 @@
       </div>
 
       <template>
-        <el-carousel indicator-position="outside" style="height: 150px;">
+        <el-carousel indicator-position="outside" class="mycar" style="height: 150px;">
           <el-carousel-item  class="div-flex" v-for="item in 5" :key="item">
-            <div class="font-1">
-              <div class="font-2">{{names[item-1]}}</div>
-              <div class="font-3"><i class="iconfont iconappkaifa"></i></div>
+            <router-link tag="div" :to="names[item-1].path" class="font-1">
+              <div class="font-2">{{names[item-1].title}}</div>
+              <div class="font-3"><i class="iconfont" :class="{[names[item-1].icon]:true}"></i></div>
               <div class="comprehend">了解详情</div>
-            </div>
-            <div class="font-4">
-              <div class="font-2">{{names[item]}}</div>
-              <div class="font-3"><i class="iconfont iconappkaifa"></i></div>
+            </router-link>
+            <router-link tag="div" :to="names[item].path" class="font-4">
+              <div class="font-2">{{names[item].title}}</div>
+              <div class="font-3"><i class="iconfont" :class="{[names[item].icon]:true}" ></i></div>
               <div class="comprehend">了解详情</div>
-            </div>
-            <!--<div class="font-1">-->
-              <!--<div class="font-2">手机APP设计开发</div>-->
-              <!--<div class="font-3"><i class="iconfont iconappkaifa"></i></div>-->
-              <!--<div class="comprehend">了解详情</div>-->
-            <!--</div>-->
-            <!--<div class="font-4">-->
-              <!--<div class="font-2">手发</div>-->
-              <!--<div class="font-3"><i class="iconfont iconappkaifa"></i></div>-->
-              <!--<div class="comprehend">了解详情</div>-->
-            <!--</div>-->
-            <!--<div class="font-1">-->
-              <!--<div class="font-2">手机APP设计开发</div>-->
-              <!--<div class="font-3"><i class="iconfont iconappkaifa"></i></div>-->
-              <!--<div class="comprehend">了解详情</div>-->
-            <!--</div>-->
+            </router-link>
           </el-carousel-item>
         </el-carousel>
       </template>
@@ -59,9 +44,9 @@
           New Product
         </div>
       </div>
-      <div style="text-align: center; margin-top: -10px;"><img src="../../assets/mobile/home/PHomeExcel.png" height="300" width="360"/></div>
-      <div class="getName">名称获取</div>
-      <div class="comprehend" style="margin-top: -3px; color: white">了解详情</div>
+      <div style="text-align: center; margin-top: -10px;"><img src="../../assets/mobile/home/PHomeExcel.png" height="150" width="180"/></div>
+      <div class="getName">Excel小帮手-软件定制</div>
+      <router-link tag="div" to="/phone/product" class="product-comprehend" style="margin-top: 11px; color: white">了解详情</router-link>
     </div>
     <div>
       <div class="newProduct0" style="color: #10103b;">关于我们</div>
@@ -72,27 +57,37 @@
       </div>
       <div id="aboutMe">
         <div id="box0"><div id="box1"><div id="box2"></div></div></div>
-        <i class="iconfont iconfazhan" style="font-size: 27px; color: #0f1937; margin-top: -20px; margin-left: 45px"></i>
-        <div class="about-div-1">
-          <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
+
+        <div v-show="!history_and_culture">
+          <i class="iconfont iconfazhan" style="font-size: 27px; color: #0f1937; margin-top: -20px; margin-left: 45px"></i>
+          <div class="about-div-1">
+            <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
+          </div>
+          <div class="line-line" style="margin-left: 141px; margin-top: -3px" ></div>
+          <div class="about-div-2">
+            <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
+          </div>
+          <div class="line-line" style="margin-left: 59px; margin-top: 77px" ></div>
+          <div class="about-div-3">
+            <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
+          </div>
         </div>
-        <div class="line-line" style="margin-left: 141px; margin-top: -3px"></div>
-        <div class="about-div-2">
-          <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
-        </div>
-        <div class="line-line" style="margin-left: 59px; margin-top: 77px"></div>
-        <div class="about-div-3">
-          <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
+        <div style="display: flex; flex-direction: row" v-show="history_and_culture">
+          <i class="iconfont iconwenhua" style="font-size: 28px; color: #0f1937; margin-left: 30px"></i>
+          <div class="div-culture">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术，给力的效率，可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</div>
         </div>
         <!--<div class="div-line">fdsfd</div>-->
         <div class="div-right">
           <div class="div-riq">
-            <div class="div-top">发展历程</div>
+            <div class="div-top" @click="history_and_culture=false">发展历程</div>
           </div>
-          <div class="div-bottom">企业文化</div>
+          <div class="div-bottom" @click="history_and_culture=true">企业文化</div>
         </div>
       </div>
     </div>
+
+
+
     <div class="aboutUs" >
       <div class="newProduct0" style="color: white; padding-top: 16px">联系我们</div>
       <div class="newProduct1" style="color: white;">
@@ -103,8 +98,8 @@
 
       <div id="contact-top">
         <div id="contact-left">
-          <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;地址:河南省安阳市汤阴县信合路南段路东47巷</div>
-          <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;电话:155-3723-2100</div>
+          <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;地址:<input v-model="contact_list.address"/></div>
+          <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;电话:<input v-model="contact_list.phone"/></div>
           <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;邮箱:123278392@qq.com</div>
           <div class="font-font"><i class="iconfont iconweixingongzhonghao" style="color: white; font-size: 12px;"></i>&nbsp;&nbsp;微信公众号:安阳大玉网络科技有限公司</div>
           <div class="use-code"><img src="../../assets/img/home/home_contactQR.png" height="109" width="109"/></div>
@@ -123,12 +118,53 @@
 </template>
 
 <script>
+  import bolosev from '../../service/bllosev.js'
   export default {
     name: 'home',
+    mounted(){
+      bolosev.contactUs({}).then(res => {
+        if (res.code == 0) {
+          this.contact_list = res.data
+        } else {
+          this.$message('操作失败');
+        }
+      }),
+      bolosev.productList({}).then(res => {
+        if (res.code == 0) {
+          console.log(res.data)
+          this.product_list = res.data
+        } else {
+          this.$message('操作失败');
+        }
+      })
+    },
     data () {
       return{
-        names:['手机APP设计开发','小程序开发设计','WEB网站设计开发','PC客户端设计开发','定制软件设计与开发'],
+        history_and_culture:true,
+        names:[{title:'手机APP设计开发',icon:'iconappkaifa',path:'service?code=myApp'},
+          {title:'小程序开发设计',icon:'icon_huabanfuben',path:'service/?code=wechat'},
+          {title:'WEB网站设计开发',icon:'iconwangzhan',path:'service/?code=myWeb'},
+          {title:'PC客户端设计开发',icon:'iconkehuduan',path:'service/?code=myPc'},
+          {title:'定制软件设计与开发',icon:'iconruanjiandingzhi',path:'service/?code=myCustom'},
+          {title:'手机APP设计开发',icon:'iconappkaifa',path:'service/?code=myApp'}
+        ],
         // names:['手机APP设计开发','小程序开发设计','WEB网站设计开发','PC客户端设计开发','定制软件设计与开发'],
+        contact_list: {
+          id:'',
+          email:'',
+          public_number:'',
+          phone:'',
+          offNum:'',
+          address:''
+        },
+        product_list: {
+          id:'',
+          cover:'',
+          pic:'',
+          name:'',
+          active:'',
+          address:''
+        },
       }
     }
   }
@@ -198,14 +234,6 @@
     text-align: center;
   }
 
-
-
-
-
-
-
-
-
   .aboutUs{
     background-color: #10103b;
     height: 591px;
@@ -219,8 +247,10 @@
     height: 24px;
     color: black;
     background-color: #fbb03b;
-    margin-left: 211px;
-    margin-top: 115px;
+    width: 145px;
+    position: absolute;
+    right: 10px;
+    bottom: 55px;
   }
   .div-riq{
     margin: auto;
@@ -313,6 +343,13 @@
     border-top: 1px solid black;
     line-height: 10px;
   }
+  .font-font>input{
+    background-color: #10103b;
+    /*background: white;*/
+    border: 0;
+    color: white;
+    font-size: 12px;
+  }
   #box0{
     width: 35px;
     height: 35px;
@@ -346,11 +383,13 @@
   }
   .getName{
     text-align: center;
-    margin-top: -50px;
+    margin-top: -26px;
+    color: white;
   }
   .testBack{
-    background-color: #43a047;
-    /*background:url('../../assets/mobile/home/homeProductBck.png')*/
+    height: 250px;
+    background:url('../../assets/mobile/home/homeProductBck.png');
+    background-size: 375px 250px;
   }
   .iconfont {
     -webkit-app-region: no-drag;
@@ -418,10 +457,26 @@
     /*padding: 6px;*/
     text-align: center;
     font-size: 12px;
-   line-height: 23px;
+    line-height: 23px;
     width: 65px;
     height: 23px;
     border: 1px solid #10103b;
     color: #10103b;
+  }
+  .div-culture{
+    width: 243px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-top: 11px;
+    margin-right: 43px;
+  }
+  .product-comprehend{
+    margin: 18px auto 0;
+    text-align: center;
+    border: white 1px solid;
+    width: 65px;
+    height: 23px;
+    font-size: 12px;
+    line-height: 23px;
   }
 </style>

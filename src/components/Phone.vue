@@ -1,7 +1,7 @@
 <template>
   <div @click="showNav=false" >
     <nav>
-      <a href="home"><i id="icon1" class="iconfont iconshouye" style="color: white; font-size: 20px;"></i></a>
+      <a href="/phone/home"><i id="icon1" class="iconfont iconshouye" style="color: white; font-size: 20px;"></i></a>
       <i id="icon2" :class="{icongengduo2:!showNav,iconguanbi:showNav}"
          @click.stop="showNav = !showNav"
          class="iconfont " style="color: white; font-size: 20px;"></i>

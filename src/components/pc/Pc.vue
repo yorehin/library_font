@@ -12,18 +12,18 @@
           <li><router-link to="/">网站首页</router-link></li>
           <li id="li1"><router-link to="Service">产品服务
             <ul class="ul">
-              <li class="li2"><router-link>手机APP设计开发</router-link></li>
-              <li class="li2"><router-link>小程序设计开发</router-link></li>
-              <li class="li2"><router-link>WEB网站设计开发</router-link></li>
-              <li class="li2"><router-link to="Service/service-pc">PC客户端设计开发</router-link></li>
-              <li class="li2"><router-link>软件定制开发</router-link></li>
+              <!--<li class="li2"><router-link>手机APP设计开发</router-link></li>-->
+              <!--<li class="li2"><router-link>小程序设计开发</router-link></li>-->
+              <!--<li class="li2"><router-link>WEB网站设计开发</router-link></li>-->
+              <!--<li class="li2"><router-link to="Service/service-pc">PC客户端设计开发</router-link></li>-->
+              <!--<li class="li2"><router-link>软件定制开发</router-link></li>-->
             </ul>
           </router-link></li>
           <li><router-link to="Product">最新产品
             <ul class="ul">
-              <li class="li"><a>Excel小帮手-定制软件</a></li>
-              <li class="li"><a>汤阴县图书馆-WEB网站</a></li>
-              <li class="li"><a>斑点狗约课-小程序</a></li>
+              <!--<li class="li"><a>Excel小帮手-定制软件</a></li>-->
+              <!--<li class="li"><a>汤阴县图书馆-WEB网站</a></li>-->
+              <!--<li class="li"><a>斑点狗约课-小程序</a></li>-->
             </ul></router-link></li>
           <li><router-link to="AboutUs">关于我们</router-link></li>
           <li><router-link to="ContactUs">联系我们</router-link></li>

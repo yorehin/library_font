@@ -1,54 +1,5 @@
 <template>
 <div class="homePage" >
-
-
-
-
-  <!--<div class="nav">-->
-    <!--<ul>-->
-      <!--<li>ABOUT</li>-->
-      <!--<li>VIEW</li>-->
-      <!--<li>CASE</li>-->
-      <!--<li>SERVICE</li>-->
-      <!--<li>HOME</li>-->
-    <!--</ul>-->
-  <!--</div>-->
-  <!--<div id="pageContain">-->
-
-    <!--<div class="page page1 current">-->
-      <!--<div class="contain">-->
-
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="page page2">-->
-      <!--<div class="contain">-->
-
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="page page3">-->
-      <!--<div class="contain">-->
-
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="page page4">-->
-      <!--<div class="contain">-->
-
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-  <!--<ul id="navBar">-->
-    <!--<li></li>-->
-    <!--<li></li>-->
-    <!--<li></li>-->
-    <!--<li></li>-->
-  <!--</ul>-->
-  <!--<div id="prev">&lt;</div>-->
-  <!--<div id="next">&gt;</div>-->
-
-
   <template>
     <el-carousel height="100vh" indicator-position="outside">
       <el-carousel-item v-for="(item ,index) in imgList" :key="item.id">
@@ -73,11 +24,11 @@
       </div>
     <div id="productContext">
       <ul class="product-ul" >
-        <li><router-link to=""><div class="li-div1"><div class="phone">手机APP设计开发</div><i class="iconfont iconappkaifa"></i><div class="lj1">了解详情</div></div></router-link></li>
-        <li><router-link to=""><div class="li-div1"><div class="phone">小程序设计开发</div><i class="iconfont icon_huabanfuben"></i><div class="lj1">了解详情</div></div></router-link></li>
-        <li><router-link to=""><div class="li-div1"><div class="phone">WEB网站设计开发</div><i class="iconfont iconwangzhan"></i><div class="lj1">了解详情</div></div></router-link></li>
-        <li><router-link to=""><div class="li-div1"><div class="phone">PC客户端设计开发</div><i class="iconfont iconkehuduan"></i><div class="lj1">了解详情</div></div></router-link></li>
-        <li><router-link to=""><div class="li-div1"><div class="phone">软件定制开发</div><i class="iconfont iconruanjiandingzhi"></i><div class="lj1">了解详情</div></div></router-link></li>
+        <li><router-link to="Service?code=myApp"><div class="li-div1"><div class="phone">手机APP设计开发</div><i class="iconfont iconappkaifa"></i><div class="lj1">了解详情</div></div></router-link></li>
+        <li><router-link to="Service?code=wechat"><div class="li-div1"><div class="phone">小程序设计开发</div><i class="iconfont icon_huabanfuben"></i><div class="lj1">了解详情</div></div></router-link></li>
+        <li><router-link to="Service?code=myWeb"><div class="li-div1"><div class="phone">WEB网站设计开发</div><i class="iconfont iconwangzhan"></i><div class="lj1">了解详情</div></div></router-link></li>
+        <li><router-link to="Service?code=myPc"><div class="li-div1"><div class="phone">PC客户端设计开发</div><i class="iconfont iconkehuduan"></i><div class="lj1">了解详情</div></div></router-link></li>
+        <li><router-link to="Service?code=myCustom"><div class="li-div1"><div class="phone">软件定制开发</div><i class="iconfont iconruanjiandingzhi"></i><div class="lj1">了解详情</div></div></router-link></li>
       </ul>
     </div>
   </div>
@@ -102,7 +53,7 @@
         <li><div class="li-div2"><div class="compute"><img src="../../../assets/img/home/home_wechat.png" height="300" width="360"/><div class="new-text">斑点狗约课-小程序</div></div></div></li>
       </ul>
       <div id="div-img"><img src="../../../assets/img/home/home_back.png" height="48" width="48"/></div>
-      <div id="div-text"><div>&nbsp;查看更多<i class="iconfont icongengduo" style="color: white; font-size: 23px; margin-left: 2px"></i></div></div>
+      <router-link tag="div" to="Product" id="div-text"><div>&nbsp;查看更多<i class="iconfont icongengduo" style="color: white; font-size: 23px; margin-left: 2px"></i></div></router-link>
     </div>
   </div>
   <div id="about">
@@ -114,23 +65,29 @@
     </div>
     <div id="aboutMe">
       <div id="box0"><div id="box1"><div id="box2"></div></div></div>
-      <i class="iconfont iconfazhan" style="font-size: 183px; color: #0f1937; margin-top: 93px; margin-left: 309px"></i>
-      <div class="about-div-1">
-        <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
-      </div>
-      <div class="line-line" style="margin-left: 740px; margin-top: -100px"></div>
-      <div class="about-div-2">
-        <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
-      </div>
-      <div class="line-line" style="margin-left: 550px; margin-top: 85px"></div>
-      <div class="about-div-3">
-        <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
+      <div v-show="history_and_culture">
+        <i class="iconfont iconfazhan" style="font-size: 183px; color: #0f1937; margin-top: 93px; margin-left: 309px"></i>
+        <div class="about-div-1">
+          <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
+        </div>
+        <div class="line-line" style="margin-left: 740px; margin-top: -100px"></div>
+        <div class="about-div-2">
+          <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
+        </div>
+        <div class="line-line" style="margin-left: 550px; margin-top: 85px"></div>
+        <div class="about-div-3">
+          <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
+        </div>
+        <div v-show="!history_and_culture">
+          <i class="iconfont iconwenhua" style="font-size: 183px; color: #0f1937; margin-left: 309px; margin-top: 10px"></i>
+          <div class="div-culture">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术，给力的效率，可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</div>
+        </div>
       </div>
       <div class="div-right">
         <div class="div-riq">
-          <div class="div-top">发展历程</div>
+          <div class="div-top" @click="history_and_culture=true">发展历程</div>
         </div>
-          <div class="div-bottom">企业文化</div>
+          <div class="div-bottom" @click="history_and_culture=false">企业文化</div>
       </div>
     </div>
   </div>
@@ -172,6 +129,7 @@
     name: 'home',
     data() {
       return {
+        history_and_culture:true,
         times: [],
         imgList: [
           {id: 0, idView: require('../../../assets/img/home/home_tranform1.png')},
@@ -356,6 +314,13 @@ i{
     width: 98px;
     border: 1px solid #10103b;
     color: #10103b;
+  }
+  .product-ul{
+    margin-left: 23px;
+    /*text-align: center;*/
+  }
+  .product-ul>li{
+    margin-left: 10px;
   }
   .product-ul a{
     display: block;
@@ -587,12 +552,10 @@ i{
   line-height: 48px;
   color: black;
   background-color: #fbb03b;
-  margin-left: 750px;
-  margin-top: 200px;
+  right: 10px;
+  bottom: 455px;
+  position: absolute;
 }
-/*.div-right a:hover{*/
-  /*color: white;*/
-/*}*/
 .div-riq{
   display: inline;
   /*margin: 0 auto;*/
@@ -850,5 +813,12 @@ i{
   .homePage>div{
 
     /*background: white !important;*/
+  }
+  .div-culture{
+    width: 468px;
+    margin-top: -200px;
+    margin-left: 100px;
+    line-height: 30px;
+    font-size: 18px;
   }
 </style>

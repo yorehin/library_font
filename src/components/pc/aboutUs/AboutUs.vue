@@ -1,33 +1,32 @@
 <template>
   <div>
     <img src="../../../assets/img/banner.png" height="100%" width="100%"/>
-    <div id="father">
-      <div class="son">
-        <h1><div style="border-left:4px solid #0f1937">发展历程</div></h1>
-        <img class="class-img" src="../../../assets/img/aboutUs/about_history.png" height="90" width="90"/>
-        <div class="border2"></div>
-        <div class="border"></div>
-        <div class="border"></div>
-        <div class="border1"></div>
-        <h2><div id="company">公司成立</div></h2>
-        <h2><div id="project">第一个项目WEB网站完成</div></h2>
-        <h2><div id="program">斑点狗约课小程序上线</div></h2>
-        <div class="about-circular" style="margin-left: 360px; margin-top: -18px"><div class="year">2018</div><div class="date">11-02</div></div>
-        <div class="about-circular" style="margin-left: 143px; margin-top: -175px"><div class="year">2018</div><div class="date">11-30</div></div>
-        <div class="about-circular" style="margin-left: 375px; margin-top: -18px"><div class="year">2019</div><div class="date">02-15</div></div>
+    <div id="mather">
+      <div id="father">
+        <div class="son">
+          <h1><div style="border-left:4px solid #0f1937">发展历程</div></h1>
+          <img class="class-img" src="../../../assets/img/aboutUs/about_history.png" height="90" width="90"/>
+          <div class="border2"></div>
+          <div class="border"></div>
+          <div class="border"></div>
+          <div class="border1"></div>
+          <h2><div id="company">公司成立</div></h2>
+          <h2><div id="project">第一个项目WEB网站完成</div></h2>
+          <h2><div id="program">斑点狗约课小程序上线</div></h2>
+          <div class="about-circular" style="margin-left: 360px; margin-top: -18px"><div class="year">2018</div><div class="date">11-02</div></div>
+          <div class="about-circular" style="margin-left: 143px; margin-top: -175px"><div class="year">2018</div><div class="date">11-30</div></div>
+          <div class="about-circular" style="margin-left: 375px; margin-top: -18px"><div class="year">2019</div><div class="date">02-15</div></div>
+        </div>
       </div>
-
     </div>
-    <div class="father">
-      <div class="son1">
-        <h1><div id="div-id" style="border-right:4px solid #0f1937">企业文化</div></h1><br>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
-        <img id="son1-img" src="../../../assets/img/aboutUs/about_culture.png" height="90" width="90"/></div>
-        <div class="back1">
-        </div>
-        <div>
 
-        </div>
+    <div id="other">
+        <div class="son1">
+          <h1><div id="div-id" style="border-right:4px solid #0f1937">企业文化</div></h1><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术、给力的效率、可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</p>
+          <img id="son1-img" src="../../../assets/img/aboutUs/about_culture.png" height="90" width="90"/></div>
+          <div class="back1">
+          </div>
     </div>
   </div>
 </template>
@@ -46,12 +45,21 @@
     /*margin-left: 100px;*/
   }
   #father{
+    margin-top: -80px;
     /*position: relative;*/
     width: 100%;
     min-width: 100vw;
-    height: 941px;
+    height: 400px;
     display: block;
   }
+  /*.ather{*/
+    /*margin-top: 80px;*/
+    /*width: 100%;*/
+    /*min-width: 100vw;*/
+    /*height: 400px;*/
+    /*display: block;*/
+    /*margin-bottom: 50px;*/
+  /*}*/
   .son{
     /*position: absolute;*/
     /*float: left;*/
@@ -63,8 +71,26 @@
     /*margin-top: 118px;*/
   }
   .son1{
+    margin-top: 100px;
     width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 200px;
+  }
+  #mather{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    background-color: #fafafa;
+    margin-right: 350px;
+  }
+  #other{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    background-color: #fafafa;
+    margin-left: 350px;
+    margin-bottom: 50px;
   }
 h1{
   font-size: 23px;
@@ -149,11 +175,11 @@ h1{
   p{
     float: left;
     width: 25vw;
-
+    line-height: 30px;
     margin-left: 300px;
   }
   #son1-img{
-    margin-left: 320px;
+    margin-left: 280px;
     margin-top: 40px;
   }
   /*.back1{*/

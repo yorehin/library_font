@@ -11,3 +11,13 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 .el-form-item__label{
   font-size: 3px;
 }
+
+.mycar.el-carousel .el-carousel__container{
+  height: 150px;
+}
+.el-carousel__indicators el-carousel__indicators--outside{
+  display: none;
+}
+.el-carousel__indicator{
+  display: none;
+}
