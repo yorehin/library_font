@@ -143,9 +143,9 @@
     data () {
       return{
         history_and_culture:false,
-        names:[{title:'手机APP设计开发',icon:'iconappkaifa',path:'service?code=myApp'},
-          {title:'小程序开发设计',icon:'icon_huabanfuben',path:'service/?code=wechat'},
-          {title:'WEB网站设计开发',icon:'iconwangzhan',path:'service/?code=myWeb'},
+        names:[{title:'餐饮管理软件安装维护',icon:'iconappkaifa',path:'service?code=myApp'},
+          {title:'购物小程序低成本设计',icon:'icon_huabanfuben',path:'service/?code=wechat'},
+          {title:'企业官网低成本开发',icon:'iconwangzhan',path:'service/?code=myWeb'},
           {title:'PC客户端设计开发',icon:'iconkehuduan',path:'service/?code=myPc'},
           {title:'定制软件设计与开发',icon:'iconruanjiandingzhi',path:'service/?code=myCustom'},
           {title:'手机APP设计开发',icon:'iconappkaifa',path:'service/?code=myApp'}
