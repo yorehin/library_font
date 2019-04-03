@@ -65,29 +65,31 @@
     </div>
     <div id="aboutMe">
       <div id="box0"><div id="box1"><div id="box2"></div></div></div>
-      <div v-show="history_and_culture">
-        <i class="iconfont iconfazhan" style="font-size: 183px; color: #0f1937; margin-top: 93px; margin-left: 309px"></i>
-        <div class="about-div-1">
-          <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
-        </div>
-        <div class="line-line" style="margin-left: 740px; margin-top: -100px"></div>
-        <div class="about-div-2">
-          <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
-        </div>
-        <div class="line-line" style="margin-left: 550px; margin-top: 85px"></div>
-        <div class="about-div-3">
-          <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
-        </div>
-        <div v-show="!history_and_culture">
+      <div>
+        <template v-if="history_and_culture" >
+          <i class="iconfont iconfazhan" style="font-size: 183px; color: #0f1937; margin-top: 93px; margin-left: 309px"></i>
+          <div class="about-div-1">
+            <div class="about-circular"><div class="year">2019</div><div class="date">02-15</div></div><div class="a-a">斑点狗约课小程序上线</div>
+          </div>
+          <div class="line-line" style="margin-left: 740px; margin-top: -100px"></div>
+          <div class="about-div-2">
+            <div class="about-circular"><div class="year">2018</div><div class="date">11-30</div></div><div class="a-a">第一个项目WEB网站完成</div>
+          </div>
+          <div class="line-line" style="margin-left: 550px; margin-top: 85px"></div>
+          <div class="about-div-3">
+            <div class="about-circular"><div class="year">2018</div><div class="date">11-02</div></div><div class="a-a">公司成立</div>
+          </div>
+        </template>
+        <div v-else>
           <i class="iconfont iconwenhua" style="font-size: 183px; color: #0f1937; margin-left: 309px; margin-top: 10px"></i>
           <div class="div-culture">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们是一个对工作充满激情和责任的团队，坚持以扎实的技术，给力的效率，可信的质量、实惠的价格、完善的售后满足客户需求，为中国信息化建设献出自己的力量。</div>
         </div>
       </div>
       <div class="div-right">
         <div class="div-riq">
-          <div class="div-top" @click="history_and_culture=true">发展历程</div>
+          <div class="div-top" :class="{active:history_and_culture}" @click="history_and_culture=true">发展历程</div>
         </div>
-          <div class="div-bottom" @click="history_and_culture=false">企业文化</div>
+        <div class="div-bottom" :class="{active:!history_and_culture}" @click="history_and_culture=false">企业文化</div>
       </div>
     </div>
   </div>
@@ -565,6 +567,7 @@ i{
   /*margin-top: auto;*/
 }
 .div-top{
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -579,8 +582,16 @@ i{
   line-height: 32px;
   /*display: inline-block;*/
   border-right: 1px solid black;
+  color: #fff;
+}
+.div-top.active{
+  color: #000;
+}
+.div-bottom.active{
+  color: #000;
 }
 .div-bottom{
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -589,6 +600,7 @@ i{
   font-size: 23px;
   margin: 0;
   width: 50%;
+  color: #fff;
   /*margin: 0 auto;*/
   /*width: 200px;*/
   /*margin-top: 0px;*/
@@ -816,9 +828,9 @@ i{
   }
   .div-culture{
     width: 468px;
-    margin-top: -200px;
-    margin-left: 100px;
-    line-height: 30px;
+    margin-top: -20px;
+    margin-left: 653px;
+    line-height: 36px;
     font-size: 18px;
   }
 </style>

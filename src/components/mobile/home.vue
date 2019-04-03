@@ -44,7 +44,9 @@
           New Product
         </div>
       </div>
-      <div style="text-align: center; margin-top: -10px;"><img src="../../assets/mobile/home/PHomeExcel.png" height="150" width="180"/></div>
+      <div class="excelImg" style="text-align: center;">
+        <!--<img src="../../assets/mobile/home/PHomeExcel.png" height="150" width="180"/>-->
+      </div>
       <div class="getName">Excel小帮手-软件定制</div>
       <router-link tag="div" to="/phone/product" class="product-comprehend" style="margin-top: 11px; color: white">了解详情</router-link>
     </div>
@@ -79,9 +81,9 @@
         <!--<div class="div-line">fdsfd</div>-->
         <div class="div-right">
           <div class="div-riq">
-            <div class="div-top" @click="history_and_culture=false">发展历程</div>
+            <div class="div-top" :class="{active:!history_and_culture}" @click="history_and_culture=false">发展历程</div>
           </div>
-          <div class="div-bottom" @click="history_and_culture=true">企业文化</div>
+          <div class="div-bottom" :class="{active:history_and_culture}" @click="history_and_culture=true">企业文化</div>
         </div>
       </div>
     </div>
@@ -140,7 +142,7 @@
     },
     data () {
       return{
-        history_and_culture:true,
+        history_and_culture:false,
         names:[{title:'手机APP设计开发',icon:'iconappkaifa',path:'service?code=myApp'},
           {title:'小程序开发设计',icon:'icon_huabanfuben',path:'service/?code=wechat'},
           {title:'WEB网站设计开发',icon:'iconwangzhan',path:'service/?code=myWeb'},
@@ -263,7 +265,15 @@
     border-right: 1px black solid;
     /*margin-top: auto;*/
   }
+  .div-top.active{
+    color: #000;
+  }
+  .div-bottom.active{
+    color: #000;
+  }
   .div-top{
+    color: #fff;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -278,6 +288,8 @@
     /*display: inline-block;*/
   }
   .div-bottom{
+    color: #fff;
+    cursor: pointer;
     width: 50%;
     height: 100%;
     line-height: 24px;
@@ -449,6 +461,14 @@
   .font-3{
     margin: 22px auto 0;
     text-align: center;
+  }
+
+  .excelImg{
+    /*width: 180px;*/
+    height: 150px;
+    background: url("../../assets/mobile/home/PHomeExcel.png") no-repeat;
+    background-position: center -10px;
+    background-size: 180px 150px;
   }
 
  .comprehend {
