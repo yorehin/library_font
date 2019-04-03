@@ -20,18 +20,20 @@
       </div>
 
       <template>
-        <el-carousel indicator-position="outside" class="mycar" style="height: 150px;">
+        <el-carousel indicator-position="outside" class="mycar">
           <el-carousel-item  class="div-flex" v-for="item in 5" :key="item">
-            <router-link tag="div" :to="names[item-1].path" class="font-1">
-              <div class="font-2">{{names[item-1].title}}</div>
-              <div class="font-3"><i class="iconfont" :class="{[names[item-1].icon]:true}"></i></div>
-              <div class="comprehend">了解详情</div>
-            </router-link>
-            <router-link tag="div" :to="names[item].path" class="font-4">
-              <div class="font-2">{{names[item].title}}</div>
-              <div class="font-3"><i class="iconfont" :class="{[names[item].icon]:true}" ></i></div>
-              <div class="comprehend">了解详情</div>
-            </router-link>
+            <div class="myopen">
+              <router-link tag="div" :to="names[item-1].path" class="font-1">
+                <div class="font-2">{{names[item-1].title}}</div>
+                <div class="font-3"><i class="iconfont" :class="{[names[item-1].icon]:true}"></i></div>
+                <div class="comprehend">了解详情</div>
+              </router-link>
+              <router-link tag="div" :to="names[item].path" class="font-4">
+                <div class="font-2">{{names[item].title}}</div>
+                <div class="font-3"><i class="iconfont" :class="{[names[item].icon]:true}" ></i></div>
+                <div class="comprehend">了解详情</div>
+              </router-link>
+            </div>
           </el-carousel-item>
         </el-carousel>
       </template>
@@ -439,17 +441,29 @@
     /*flex-direction: row;*/
     /*height: 100%;*/
   /*}*/
+  .myopen{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin: 13px auto 0;
+    text-align: center;
+  }
+  .mycar{
+    height: 150px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+  }
   .font-1{
     border: 1px #10103b dashed;
     width: 174px;
     height: 131px;
-    margin: 10px;
+    /*margin: 10px;*/
   }
   .font-4{
     border: 1px #10103b dashed;
     width: 174px;
     height: 131px;
-    margin: -143px 10px 10px 192px;
+    /*margin: -143px 10px 10px 192px;*/
   }
   .font-2 {
     margin-top: 15px;
