@@ -102,8 +102,8 @@
       </div>
     <div id="contact-top">
       <div id="contact-left">
-        <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址：<label v-model="product_list.address"/></div>
-        <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：<label v-model="product_list.phone"/></div>
+        <div class="font-font"><i class="iconfont iconplace" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;地址：{{product_list.address}}</div>
+        <div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：{{product_list.phone}}</div>
         <!--<div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：<input v-model="product_list.email"/></div>-->
         <!--<div class="font-font"><i class="iconfont iconshouji" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;电话：<input v-model="product_list.public_number"/></div>-->
         <div class="font-font"><i class="iconfont iconyouxiang" style="color: white; font-size: 23px;"></i>&nbsp;&nbsp;邮箱：123278392@qq.com</div>
