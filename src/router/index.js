@@ -5,6 +5,11 @@ import Router from 'vue-router'
 import Home from '@/components/pc/home/Home'
 import Service from '../components/pc/service/ServiceP'
 import Product from '../components/pc/product/Product'
+import dog from '../components/pc/product/PC_product_dog'
+import excel from '../components/pc/product/PC_product_excel'
+import lib from '../components/pc/product/PC_product_lib'
+import libList from '../components/pc/product/PC_product_lib_list'
+import weChat from '../components/pc/product/PC_product_wechat'
 import AboutUs from '../components/pc/aboutUs/AboutUs'
 import ContactUs from '../components/pc/contactUs/ContactUs'
 import Login from '../components/back/Login'
@@ -26,16 +31,6 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    // {
-    //   path: '/textnav',
-    //   name: 'textnav',
-    //   component: textnav
-    // },
-    // {
-    //   path: '/helloworld',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
     {
       path: '/',
       name: 'Pc',
@@ -61,13 +56,38 @@ export default new Router({
         {
           path: '/product',
           name: 'Product',
-          component: Product
+          component: Product,
         },
         {
           path: '/service',
           name: 'Service',
           component: Service
         },
+        {
+          path: '/dog',
+          name: 'dog',
+          component: dog
+        },
+        {
+          path: 'excel',
+          name: 'excel',
+          component: excel
+        },
+        {
+          path: '/lib',
+          name: 'lib',
+          component: lib
+        },
+        {
+          path: '/libList',
+          name: 'libList',
+          component: libList
+        },
+        {
+          path: '/weChat',
+          name: 'weChat',
+          component: weChat
+        }
       ]
     },
     {
