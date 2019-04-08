@@ -5,12 +5,12 @@
     <div id="div-img">
       <div class="div-bottom">斑点狗小程序<br></div>
       <div class="div-flex">
-        <img src="../../../assets/img/product/最新产品详情-斑点狗1.png" height="667" width="375"/>
-        <img src="../../../assets/img/product/最新产品详情-斑点狗2.png" height="667" width="375"/>
-        <img src="../../../assets/img/product/最新产品详情-斑点狗3.png" height="667" width="375"/>
-        <img src="../../../assets/img/product/最新产品详情-斑点狗 4.png" height="667" width="375"/>
-        <img src="../../../assets/img/product/最新产品详情-斑点狗5.png" height="667" width="375"/>
-        <img src="../../../assets/img/product/最新产品详情-斑点狗6.png" height="667" width="375"/>
+        <img src="../../../assets/img/product/dog1.png" height="667" width="375"/>
+        <img src="../../../assets/img/product/dog2.png" height="667" width="375"/>
+        <img src="../../../assets/img/product/dog3.png" height="667" width="375"/>
+        <img src="../../../assets/img/product/dog4.png" height="667" width="375"/>
+        <img src="../../../assets/img/product/dog5.png" height="667" width="375"/>
+        <img src="../../../assets/img/product/dog6.png" height="667" width="375"/>
       </div>
     </div>
 

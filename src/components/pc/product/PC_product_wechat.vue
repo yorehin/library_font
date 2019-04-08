@@ -5,13 +5,12 @@
     <div id="div-img">
       <div class="div-bottom">汤阴县图书管微信公众号<br></div>
       <div class="div-flex">
-
-        <img src="../../../assets/img/product/最新产品详情-公众号 (1).png" height="669" width="377"/>
-        <img src="../../../assets/img/product/最新产品详情-公众号 (3).png" height="669" width="377"/>
-        <img src="../../../assets/img/product/最新产品详情-公众号 (4).png" height="669" width="377"/>
-        <img src="../../../assets/img/product/最新产品详情-公众号 (5).png" height="669" width="377"/>
-        <img src="../../../assets/img/product/最新产品详情-公众号 (6).png" height="669" width="377"/>
-        <img src="../../../assets/img/product/最新产品详情-公众号1.png" height="669" width="377"/>
+        <img src="../../../assets/img/product/wechat6.png" height="669" width="377"/>
+        <img src="../../../assets/img/product/wechat2.png" height="669" width="377"/>
+        <img src="../../../assets/img/product/wechat3.png" height="669" width="377"/>
+        <img src="../../../assets/img/product/wechat4.png" height="669" width="377"/>
+        <img src="../../../assets/img/product/wechat5.png" height="669" width="377"/>
+        <img src="../../../assets/img/product/wechat1.png" height="669" width="377"/>
       </div>
     </div>
   </div>

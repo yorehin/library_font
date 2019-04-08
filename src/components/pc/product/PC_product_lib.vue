@@ -3,7 +3,7 @@
     <img src="../../../assets/img/banner.png" height="100%" width="100%"/>
     <div id="div-img">
       <div class="div-bottom">汤阴县图书管<br></div>
-      <img src="../../../assets/img/product/最新产品详情-图书馆.png" height="2148" width="1202"/>
+      <img src="../../../assets/img/product/lib_list2.png" height="2148" width="1202"/>
     </div>
   </div>
 
