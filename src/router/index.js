@@ -17,6 +17,11 @@ import Pc from '../components/pc/Pc'
 import phone from '../components/Phone'
 import home from '../components/mobile/home'
 import wechat from '../components/mobile/wechat'
+import Dog from '../components/mobile/p_product_dog'
+import Excel from '../components/mobile/p_product_excel'
+import Lib from '../components/mobile/p_product_lib'
+import LibList from '../components/mobile/p_product_lib_list'
+import WeChat from '../components/mobile/p_product_wechat'
 import aboutus from '../components/mobile/aboutus'
 import contractus from '../components/mobile/contractus'
 import product from '../components/mobile/products'
@@ -135,7 +140,39 @@ export default new Router({
           path: 'wechat',
           name: 'wechat',
           component: wechat
+        },
+        {
+          path: 'Dog',
+          name: 'Dog',
+          component: Dog
+        },
+        {
+          path: 'Excel',
+          name: 'Excel',
+          component: Excel
+        },
+        {
+          path: '/Lib',
+          name: 'Lib',
+          component: Lib
+        },
+        {
+          path: '/LibList',
+          name: 'LibList',
+          component: LibList
+        },
+        {
+          path: '/WeChat',
+          name: 'WeChat',
+          component: WeChat
         }
+
+
+
+
+
+
+
       ]
 
     },
