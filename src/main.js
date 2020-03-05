@@ -12,7 +12,7 @@ import AboutUs from './components/pc/aboutUs/AboutUs'
 import Login from './components/back/Login'
 import ElementUI from 'element-ui'
 import './assets/element-variables.scss'
-
+//sngm pe
 Vue.config.productionTip = false
 Vue.component('ServiceP', Service)
 Vue.component('Product', Product)
